@@ -25,7 +25,8 @@
 2. Goblin towns can upgrade to "strongholds" after a number of successful raids, which increases their "strength" as well as allow them to have a Hobgoblin general.
 3. A Hobgoblin general boosts the combat strength of the goblin armies as the stats of the general are used to boost the quantity and health of the battalions comprising the goblin army.
 4. A scouting function to pay a $LORDS fee to try and scout the details of the goblin forces to better prepare defense/attack forces
-5. A Hobgoblin general drops bonus rewards when defeated but can be allowed to escape by not attacking the goblin town with a vastly superior force, thereby allowing them to escape and become a "nemesis", who will return the next time a stronghold appears with a higher rarity item drop.
+5. Functions to generate a new general with semi-randomized stats or upgrading an existing general when a stronghold increases in strength and level (strongholds can keep increasing in level with successful raids). 'Nemesis' generals have a higher chance to get better upgrades and higher levels.
+6. A Hobgoblin general drops bonus rewards when defeated but can be allowed to escape by not attacking the goblin town with a vastly superior force, thereby allowing them to escape and become a "nemesis", who will return the next time a stronghold appears with a higher rarity item drop.
 
 I have added new Protostar tests accordingly in:
 
