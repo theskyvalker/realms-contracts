@@ -17,7 +17,20 @@
 
 ## Realms is an ever-expanding on-chain permission-less gaming Lootverse built on StarkNet. 
 
-### This monorepo contains all of the Contracts (StarkNet/Cairo Ethereum/Solidity) for Bibliotheca DAO, $LORDS, and Realms.
+### This fork contains my work for the MatchboxDAO hackathon #2 where I have tried to expand the GoblinTown module with new features.
+
+### Summary of Contributions
+
+1. Goblin town launches attacks at regular intervals after spawning, trying to loot resources. In order to do this, a Goblin army is generated based on the goblin town's strength parameter
+2. Goblin towns can upgrade to "strongholds" after a number of successful raids, which increases their "strength" as well as allow them to have a Hobgoblin general.
+3. A Hobgoblin general boosts the combat strength of the goblin armies as the stats of the general are used to boost the quantity and health of the battalions comprising the goblin army.
+4. A scouting function to pay a $LORDS fee to try and scout the details of the goblin forces to better prepare defense/attack forces
+5. A Hobgoblin general drops bonus rewards when defeated but can be allowed to escape by not attacking the goblin town with a vastly superior force, thereby allowing them to escape and become a "nemesis", who will return the next time a stronghold appears with a higher rarity item drop.
+
+I have added new Protostar tests accordingly in:
+
+tests/protostar/settling_game/goblintown/test_goblintown.cairo and \
+tests/protostar/settling_game/combat/test_combat_2.cairo
 
 ---
 
