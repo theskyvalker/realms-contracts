@@ -552,3 +552,16 @@ struct ArmyData {
     Level: felt,
     CallSign: felt,
 }
+
+struct HobgoblinGeneral {
+    LightCavalry: felt,
+    HeavyCavalry: felt,
+    Archer: felt,
+    Longbow: felt,
+    Mage: felt,
+    Arcanist: felt,
+    LightInfantry: felt,
+    HeavyInfantry: felt,
+    Level: felt,
+    Nemesis: felt,
+}

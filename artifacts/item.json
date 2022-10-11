@@ -1,0 +1,3967 @@
+{
+    "abi": [],
+    "entry_points_by_type": {
+        "CONSTRUCTOR": [],
+        "EXTERNAL": [],
+        "L1_HANDLER": []
+    },
+    "program": {
+        "attributes": [],
+        "builtins": [
+            "range_check"
+        ],
+        "compiler_version": "0.10.0",
+        "data": [],
+        "debug_info": {
+            "file_contents": {},
+            "instruction_locations": {}
+        },
+        "hints": {},
+        "identifiers": {
+            "__main__.Item": {
+                "full_name": "__main__.Item",
+                "members": {
+                    "Adventurer": {
+                        "cairo_type": "felt",
+                        "offset": 11
+                    },
+                    "Bag": {
+                        "cairo_type": "felt",
+                        "offset": 12
+                    },
+                    "CreatedBlock": {
+                        "cairo_type": "felt",
+                        "offset": 9
+                    },
+                    "Greatness": {
+                        "cairo_type": "felt",
+                        "offset": 8
+                    },
+                    "Id": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    },
+                    "Material": {
+                        "cairo_type": "felt",
+                        "offset": 3
+                    },
+                    "Prefix_1": {
+                        "cairo_type": "felt",
+                        "offset": 5
+                    },
+                    "Prefix_2": {
+                        "cairo_type": "felt",
+                        "offset": 6
+                    },
+                    "Rank": {
+                        "cairo_type": "felt",
+                        "offset": 4
+                    },
+                    "Slot": {
+                        "cairo_type": "felt",
+                        "offset": 1
+                    },
+                    "Suffix": {
+                        "cairo_type": "felt",
+                        "offset": 7
+                    },
+                    "Type": {
+                        "cairo_type": "felt",
+                        "offset": 2
+                    },
+                    "XP": {
+                        "cairo_type": "felt",
+                        "offset": 10
+                    }
+                },
+                "size": 13,
+                "type": "struct"
+            },
+            "__main__.ItemIds": {
+                "type": "namespace"
+            },
+            "__main__.ItemIds.Amulet": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemIds.AncientHelm": {
+                "type": "const",
+                "value": 82
+            },
+            "__main__.ItemIds.Args": {
+                "full_name": "__main__.ItemIds.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.ItemIds.BoneWand": {
+                "type": "const",
+                "value": 11
+            },
+            "__main__.ItemIds.Book": {
+                "type": "const",
+                "value": 16
+            },
+            "__main__.ItemIds.BrightsilkSash": {
+                "type": "const",
+                "value": 27
+            },
+            "__main__.ItemIds.BronzeRing": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemIds.Cap": {
+                "type": "const",
+                "value": 56
+            },
+            "__main__.ItemIds.ChainBoots": {
+                "type": "const",
+                "value": 95
+            },
+            "__main__.ItemIds.ChainGloves": {
+                "type": "const",
+                "value": 100
+            },
+            "__main__.ItemIds.ChainMail": {
+                "type": "const",
+                "value": 80
+            },
+            "__main__.ItemIds.Chronicle": {
+                "type": "const",
+                "value": 14
+            },
+            "__main__.ItemIds.Club": {
+                "type": "const",
+                "value": 76
+            },
+            "__main__.ItemIds.Crown": {
+                "type": "const",
+                "value": 22
+            },
+            "__main__.ItemIds.DemonCrown": {
+                "type": "const",
+                "value": 52
+            },
+            "__main__.ItemIds.DemonHusk": {
+                "type": "const",
+                "value": 47
+            },
+            "__main__.ItemIds.DemonhideBelt": {
+                "type": "const",
+                "value": 57
+            },
+            "__main__.ItemIds.DemonhideBoots": {
+                "type": "const",
+                "value": 62
+            },
+            "__main__.ItemIds.DemonsHands": {
+                "type": "const",
+                "value": 67
+            },
+            "__main__.ItemIds.DivineGloves": {
+                "type": "const",
+                "value": 37
+            },
+            "__main__.ItemIds.DivineHood": {
+                "type": "const",
+                "value": 23
+            },
+            "__main__.ItemIds.DivineRobe": {
+                "type": "const",
+                "value": 17
+            },
+            "__main__.ItemIds.DivineSlippers": {
+                "type": "const",
+                "value": 32
+            },
+            "__main__.ItemIds.DragonsCrown": {
+                "type": "const",
+                "value": 53
+            },
+            "__main__.ItemIds.DragonskinArmor": {
+                "type": "const",
+                "value": 48
+            },
+            "__main__.ItemIds.DragonskinBelt": {
+                "type": "const",
+                "value": 58
+            },
+            "__main__.ItemIds.DragonskinBoots": {
+                "type": "const",
+                "value": 63
+            },
+            "__main__.ItemIds.DragonskinGloves": {
+                "type": "const",
+                "value": 68
+            },
+            "__main__.ItemIds.Falchion": {
+                "type": "const",
+                "value": 43
+            },
+            "__main__.ItemIds.FullHelm": {
+                "type": "const",
+                "value": 85
+            },
+            "__main__.ItemIds.Gauntlets": {
+                "type": "const",
+                "value": 99
+            },
+            "__main__.ItemIds.GhostWand": {
+                "type": "const",
+                "value": 9
+            },
+            "__main__.ItemIds.Gloves": {
+                "type": "const",
+                "value": 41
+            },
+            "__main__.ItemIds.GoldRing": {
+                "type": "const",
+                "value": 8
+            },
+            "__main__.ItemIds.GraveWand": {
+                "type": "const",
+                "value": 10
+            },
+            "__main__.ItemIds.GreatHelm": {
+                "type": "const",
+                "value": 84
+            },
+            "__main__.ItemIds.Greaves": {
+                "type": "const",
+                "value": 94
+            },
+            "__main__.ItemIds.Grimoire": {
+                "type": "const",
+                "value": 13
+            },
+            "__main__.ItemIds.HardLeatherArmor": {
+                "type": "const",
+                "value": 50
+            },
+            "__main__.ItemIds.HardLeatherBelt": {
+                "type": "const",
+                "value": 60
+            },
+            "__main__.ItemIds.HardLeatherBoots": {
+                "type": "const",
+                "value": 65
+            },
+            "__main__.ItemIds.HardLeatherGloves": {
+                "type": "const",
+                "value": 70
+            },
+            "__main__.ItemIds.HeavyBelt": {
+                "type": "const",
+                "value": 91
+            },
+            "__main__.ItemIds.HeavyBoots": {
+                "type": "const",
+                "value": 96
+            },
+            "__main__.ItemIds.HeavyGloves": {
+                "type": "const",
+                "value": 101
+            },
+            "__main__.ItemIds.Helm": {
+                "type": "const",
+                "value": 86
+            },
+            "__main__.ItemIds.HolyChestplate": {
+                "type": "const",
+                "value": 77
+            },
+            "__main__.ItemIds.HolyGauntlets": {
+                "type": "const",
+                "value": 97
+            },
+            "__main__.ItemIds.HolyGreaves": {
+                "type": "const",
+                "value": 92
+            },
+            "__main__.ItemIds.Hood": {
+                "type": "const",
+                "value": 26
+            },
+            "__main__.ItemIds.ImplicitArgs": {
+                "full_name": "__main__.ItemIds.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.ItemIds.Katana": {
+                "type": "const",
+                "value": 42
+            },
+            "__main__.ItemIds.LeatherArmor": {
+                "type": "const",
+                "value": 51
+            },
+            "__main__.ItemIds.LeatherBelt": {
+                "type": "const",
+                "value": 61
+            },
+            "__main__.ItemIds.LeatherBoots": {
+                "type": "const",
+                "value": 66
+            },
+            "__main__.ItemIds.LeatherCap": {
+                "type": "const",
+                "value": 55
+            },
+            "__main__.ItemIds.LeatherGloves": {
+                "type": "const",
+                "value": 71
+            },
+            "__main__.ItemIds.LinenGloves": {
+                "type": "const",
+                "value": 40
+            },
+            "__main__.ItemIds.LinenHood": {
+                "type": "const",
+                "value": 25
+            },
+            "__main__.ItemIds.LinenRobe": {
+                "type": "const",
+                "value": 19
+            },
+            "__main__.ItemIds.LinenSash": {
+                "type": "const",
+                "value": 30
+            },
+            "__main__.ItemIds.LinenShoes": {
+                "type": "const",
+                "value": 35
+            },
+            "__main__.ItemIds.LongSword": {
+                "type": "const",
+                "value": 45
+            },
+            "__main__.ItemIds.Mace": {
+                "type": "const",
+                "value": 75
+            },
+            "__main__.ItemIds.Maul": {
+                "type": "const",
+                "value": 74
+            },
+            "__main__.ItemIds.MeshBelt": {
+                "type": "const",
+                "value": 90
+            },
+            "__main__.ItemIds.Necklace": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemIds.OrnateBelt": {
+                "type": "const",
+                "value": 87
+            },
+            "__main__.ItemIds.OrnateChestplate": {
+                "type": "const",
+                "value": 78
+            },
+            "__main__.ItemIds.OrnateGauntlets": {
+                "type": "const",
+                "value": 98
+            },
+            "__main__.ItemIds.OrnateGreaves": {
+                "type": "const",
+                "value": 93
+            },
+            "__main__.ItemIds.OrnateHelm": {
+                "type": "const",
+                "value": 83
+            },
+            "__main__.ItemIds.Pendant": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemIds.PlateMail": {
+                "type": "const",
+                "value": 79
+            },
+            "__main__.ItemIds.PlatedBelt": {
+                "type": "const",
+                "value": 89
+            },
+            "__main__.ItemIds.PlatinumRing": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemIds.Quarterstaff": {
+                "type": "const",
+                "value": 73
+            },
+            "__main__.ItemIds.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.ItemIds.RingMail": {
+                "type": "const",
+                "value": 81
+            },
+            "__main__.ItemIds.Robe": {
+                "type": "const",
+                "value": 20
+            },
+            "__main__.ItemIds.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.ItemIds.Sash": {
+                "type": "const",
+                "value": 31
+            },
+            "__main__.ItemIds.Scimitar": {
+                "type": "const",
+                "value": 44
+            },
+            "__main__.ItemIds.Shirt": {
+                "type": "const",
+                "value": 21
+            },
+            "__main__.ItemIds.Shoes": {
+                "type": "const",
+                "value": 36
+            },
+            "__main__.ItemIds.ShortSword": {
+                "type": "const",
+                "value": 46
+            },
+            "__main__.ItemIds.SilkGloves": {
+                "type": "const",
+                "value": 38
+            },
+            "__main__.ItemIds.SilkHood": {
+                "type": "const",
+                "value": 24
+            },
+            "__main__.ItemIds.SilkRobe": {
+                "type": "const",
+                "value": 18
+            },
+            "__main__.ItemIds.SilkSash": {
+                "type": "const",
+                "value": 28
+            },
+            "__main__.ItemIds.SilkSlippers": {
+                "type": "const",
+                "value": 33
+            },
+            "__main__.ItemIds.SilverRing": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemIds.StuddedLeatherArmor": {
+                "type": "const",
+                "value": 49
+            },
+            "__main__.ItemIds.StuddedLeatherBelt": {
+                "type": "const",
+                "value": 59
+            },
+            "__main__.ItemIds.StuddedLeatherBoots": {
+                "type": "const",
+                "value": 64
+            },
+            "__main__.ItemIds.StuddedLeatherGloves": {
+                "type": "const",
+                "value": 69
+            },
+            "__main__.ItemIds.TitaniumRing": {
+                "type": "const",
+                "value": 7
+            },
+            "__main__.ItemIds.Tome": {
+                "type": "const",
+                "value": 15
+            },
+            "__main__.ItemIds.Wand": {
+                "type": "const",
+                "value": 12
+            },
+            "__main__.ItemIds.WarBelt": {
+                "type": "const",
+                "value": 88
+            },
+            "__main__.ItemIds.WarCap": {
+                "type": "const",
+                "value": 54
+            },
+            "__main__.ItemIds.Warhammer": {
+                "type": "const",
+                "value": 72
+            },
+            "__main__.ItemIds.WoolGloves": {
+                "type": "const",
+                "value": 39
+            },
+            "__main__.ItemIds.WoolSash": {
+                "type": "const",
+                "value": 29
+            },
+            "__main__.ItemIds.WoolShoes": {
+                "type": "const",
+                "value": 34
+            },
+            "__main__.ItemMaterial": {
+                "type": "namespace"
+            },
+            "__main__.ItemMaterial.Amulet": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.ItemMaterial.AncientHelm": {
+                "type": "const",
+                "value": 1001
+            },
+            "__main__.ItemMaterial.Args": {
+                "full_name": "__main__.ItemMaterial.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.ItemMaterial.BoneWand": {
+                "type": "const",
+                "value": 5109
+            },
+            "__main__.ItemMaterial.Book": {
+                "type": "const",
+                "value": 4000
+            },
+            "__main__.ItemMaterial.BrightsilkSash": {
+                "type": "const",
+                "value": 2003
+            },
+            "__main__.ItemMaterial.BronzeRing": {
+                "type": "const",
+                "value": 1006
+            },
+            "__main__.ItemMaterial.Cap": {
+                "type": "const",
+                "value": 3305
+            },
+            "__main__.ItemMaterial.ChainBoots": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.ChainGloves": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.ChainMail": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.Chronicle": {
+                "type": "const",
+                "value": 4000
+            },
+            "__main__.ItemMaterial.Club": {
+                "type": "const",
+                "value": 5104
+            },
+            "__main__.ItemMaterial.Crown": {
+                "type": "const",
+                "value": 2001
+            },
+            "__main__.ItemMaterial.DemonCrown": {
+                "type": "const",
+                "value": 3102
+            },
+            "__main__.ItemMaterial.DemonHusk": {
+                "type": "const",
+                "value": 3105
+            },
+            "__main__.ItemMaterial.DemonhideBelt": {
+                "type": "const",
+                "value": 3105
+            },
+            "__main__.ItemMaterial.DemonhideBoots": {
+                "type": "const",
+                "value": 3105
+            },
+            "__main__.ItemMaterial.DemonsHands": {
+                "type": "const",
+                "value": 3110
+            },
+            "__main__.ItemMaterial.DivineGloves": {
+                "type": "const",
+                "value": 2002
+            },
+            "__main__.ItemMaterial.DivineHood": {
+                "type": "const",
+                "value": 2002
+            },
+            "__main__.ItemMaterial.DivineRobe": {
+                "type": "const",
+                "value": 2002
+            },
+            "__main__.ItemMaterial.DivineSlippers": {
+                "type": "const",
+                "value": 2002
+            },
+            "__main__.ItemMaterial.DragonsCrown": {
+                "type": "const",
+                "value": 3202
+            },
+            "__main__.ItemMaterial.DragonskinArmor": {
+                "type": "const",
+                "value": 3205
+            },
+            "__main__.ItemMaterial.DragonskinBelt": {
+                "type": "const",
+                "value": 3205
+            },
+            "__main__.ItemMaterial.DragonskinBoots": {
+                "type": "const",
+                "value": 3205
+            },
+            "__main__.ItemMaterial.DragonskinGloves": {
+                "type": "const",
+                "value": 3205
+            },
+            "__main__.ItemMaterial.Falchion": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.FullHelm": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.Gauntlets": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.GhostWand": {
+                "type": "const",
+                "value": 5206
+            },
+            "__main__.ItemMaterial.Gloves": {
+                "type": "const",
+                "value": 2000
+            },
+            "__main__.ItemMaterial.GoldRing": {
+                "type": "const",
+                "value": 1004
+            },
+            "__main__.ItemMaterial.GraveWand": {
+                "type": "const",
+                "value": 5207
+            },
+            "__main__.ItemMaterial.GreatHelm": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.Greaves": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.Grimoire": {
+                "type": "const",
+                "value": 4001
+            },
+            "__main__.ItemMaterial.HardLeatherArmor": {
+                "type": "const",
+                "value": 3305
+            },
+            "__main__.ItemMaterial.HardLeatherBelt": {
+                "type": "const",
+                "value": 3305
+            },
+            "__main__.ItemMaterial.HardLeatherBoots": {
+                "type": "const",
+                "value": 3305
+            },
+            "__main__.ItemMaterial.HardLeatherGloves": {
+                "type": "const",
+                "value": 3305
+            },
+            "__main__.ItemMaterial.HeavyBelt": {
+                "type": "const",
+                "value": 1000
+            },
+            "__main__.ItemMaterial.HeavyBoots": {
+                "type": "const",
+                "value": 1000
+            },
+            "__main__.ItemMaterial.HeavyGloves": {
+                "type": "const",
+                "value": 1000
+            },
+            "__main__.ItemMaterial.Helm": {
+                "type": "const",
+                "value": 1000
+            },
+            "__main__.ItemMaterial.HolyChestplate": {
+                "type": "const",
+                "value": 1002
+            },
+            "__main__.ItemMaterial.HolyGauntlets": {
+                "type": "const",
+                "value": 1002
+            },
+            "__main__.ItemMaterial.HolyGreaves": {
+                "type": "const",
+                "value": 1002
+            },
+            "__main__.ItemMaterial.Hood": {
+                "type": "const",
+                "value": 2000
+            },
+            "__main__.ItemMaterial.ImplicitArgs": {
+                "full_name": "__main__.ItemMaterial.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.ItemMaterial.Katana": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.LeatherArmor": {
+                "type": "const",
+                "value": 3305
+            },
+            "__main__.ItemMaterial.LeatherBelt": {
+                "type": "const",
+                "value": 3305
+            },
+            "__main__.ItemMaterial.LeatherBoots": {
+                "type": "const",
+                "value": 3305
+            },
+            "__main__.ItemMaterial.LeatherCap": {
+                "type": "const",
+                "value": 3305
+            },
+            "__main__.ItemMaterial.LeatherGloves": {
+                "type": "const",
+                "value": 3305
+            },
+            "__main__.ItemMaterial.LinenGloves": {
+                "type": "const",
+                "value": 2006
+            },
+            "__main__.ItemMaterial.LinenHood": {
+                "type": "const",
+                "value": 2006
+            },
+            "__main__.ItemMaterial.LinenRobe": {
+                "type": "const",
+                "value": 2006
+            },
+            "__main__.ItemMaterial.LinenSash": {
+                "type": "const",
+                "value": 2006
+            },
+            "__main__.ItemMaterial.LinenShoes": {
+                "type": "const",
+                "value": 2006
+            },
+            "__main__.ItemMaterial.LongSword": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.Mace": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.Maul": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.MeshBelt": {
+                "type": "const",
+                "value": 1000
+            },
+            "__main__.ItemMaterial.Necklace": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.ItemMaterial.OrnateBelt": {
+                "type": "const",
+                "value": 1003
+            },
+            "__main__.ItemMaterial.OrnateChestplate": {
+                "type": "const",
+                "value": 1003
+            },
+            "__main__.ItemMaterial.OrnateGauntlets": {
+                "type": "const",
+                "value": 1003
+            },
+            "__main__.ItemMaterial.OrnateGreaves": {
+                "type": "const",
+                "value": 1003
+            },
+            "__main__.ItemMaterial.OrnateHelm": {
+                "type": "const",
+                "value": 1003
+            },
+            "__main__.ItemMaterial.Pendant": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.ItemMaterial.PlateMail": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.PlatedBelt": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.PlatinumRing": {
+                "type": "const",
+                "value": 1007
+            },
+            "__main__.ItemMaterial.Quarterstaff": {
+                "type": "const",
+                "value": 5000
+            },
+            "__main__.ItemMaterial.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.ItemMaterial.RingMail": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.Robe": {
+                "type": "const",
+                "value": 2000
+            },
+            "__main__.ItemMaterial.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.ItemMaterial.Sash": {
+                "type": "const",
+                "value": 2000
+            },
+            "__main__.ItemMaterial.Scimitar": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.Shirt": {
+                "type": "const",
+                "value": 2000
+            },
+            "__main__.ItemMaterial.Shoes": {
+                "type": "const",
+                "value": 2000
+            },
+            "__main__.ItemMaterial.ShortSword": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.SilkGloves": {
+                "type": "const",
+                "value": 2004
+            },
+            "__main__.ItemMaterial.SilkHood": {
+                "type": "const",
+                "value": 2004
+            },
+            "__main__.ItemMaterial.SilkRobe": {
+                "type": "const",
+                "value": 2004
+            },
+            "__main__.ItemMaterial.SilkSash": {
+                "type": "const",
+                "value": 2004
+            },
+            "__main__.ItemMaterial.SilkSlippers": {
+                "type": "const",
+                "value": 2004
+            },
+            "__main__.ItemMaterial.SilverRing": {
+                "type": "const",
+                "value": 1005
+            },
+            "__main__.ItemMaterial.StuddedLeatherArmor": {
+                "type": "const",
+                "value": 3305
+            },
+            "__main__.ItemMaterial.StuddedLeatherBelt": {
+                "type": "const",
+                "value": 3305
+            },
+            "__main__.ItemMaterial.StuddedLeatherBoots": {
+                "type": "const",
+                "value": 3305
+            },
+            "__main__.ItemMaterial.StuddedLeatherGloves": {
+                "type": "const",
+                "value": 3305
+            },
+            "__main__.ItemMaterial.TitaniumRing": {
+                "type": "const",
+                "value": 1008
+            },
+            "__main__.ItemMaterial.Tome": {
+                "type": "const",
+                "value": 4000
+            },
+            "__main__.ItemMaterial.Wand": {
+                "type": "const",
+                "value": 5104
+            },
+            "__main__.ItemMaterial.WarBelt": {
+                "type": "const",
+                "value": 1000
+            },
+            "__main__.ItemMaterial.WarCap": {
+                "type": "const",
+                "value": 3305
+            },
+            "__main__.ItemMaterial.Warhammer": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.ItemMaterial.WoolGloves": {
+                "type": "const",
+                "value": 2005
+            },
+            "__main__.ItemMaterial.WoolSash": {
+                "type": "const",
+                "value": 2005
+            },
+            "__main__.ItemMaterial.WoolShoes": {
+                "type": "const",
+                "value": 2005
+            },
+            "__main__.ItemNamePrefixes": {
+                "type": "namespace"
+            },
+            "__main__.ItemNamePrefixes.Agony": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemNamePrefixes.Apocalypse": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemNamePrefixes.Args": {
+                "full_name": "__main__.ItemNamePrefixes.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.ItemNamePrefixes.Armageddon": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemNamePrefixes.Beast": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemNamePrefixes.Behemoth": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemNamePrefixes.Blight": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemNamePrefixes.Blood": {
+                "type": "const",
+                "value": 7
+            },
+            "__main__.ItemNamePrefixes.Bramble": {
+                "type": "const",
+                "value": 8
+            },
+            "__main__.ItemNamePrefixes.Brimstone": {
+                "type": "const",
+                "value": 9
+            },
+            "__main__.ItemNamePrefixes.Brood": {
+                "type": "const",
+                "value": 10
+            },
+            "__main__.ItemNamePrefixes.Carrion": {
+                "type": "const",
+                "value": 11
+            },
+            "__main__.ItemNamePrefixes.Cataclysm": {
+                "type": "const",
+                "value": 12
+            },
+            "__main__.ItemNamePrefixes.Chimeric": {
+                "type": "const",
+                "value": 13
+            },
+            "__main__.ItemNamePrefixes.Corpse": {
+                "type": "const",
+                "value": 14
+            },
+            "__main__.ItemNamePrefixes.Corruption": {
+                "type": "const",
+                "value": 15
+            },
+            "__main__.ItemNamePrefixes.Damnation": {
+                "type": "const",
+                "value": 16
+            },
+            "__main__.ItemNamePrefixes.Death": {
+                "type": "const",
+                "value": 17
+            },
+            "__main__.ItemNamePrefixes.Demon": {
+                "type": "const",
+                "value": 18
+            },
+            "__main__.ItemNamePrefixes.Dire": {
+                "type": "const",
+                "value": 19
+            },
+            "__main__.ItemNamePrefixes.Doom": {
+                "type": "const",
+                "value": 22
+            },
+            "__main__.ItemNamePrefixes.Dragon": {
+                "type": "const",
+                "value": 20
+            },
+            "__main__.ItemNamePrefixes.Dread": {
+                "type": "const",
+                "value": 21
+            },
+            "__main__.ItemNamePrefixes.Dusk": {
+                "type": "const",
+                "value": 23
+            },
+            "__main__.ItemNamePrefixes.Eagle": {
+                "type": "const",
+                "value": 24
+            },
+            "__main__.ItemNamePrefixes.Empyrean": {
+                "type": "const",
+                "value": 25
+            },
+            "__main__.ItemNamePrefixes.Fate": {
+                "type": "const",
+                "value": 26
+            },
+            "__main__.ItemNamePrefixes.Foe": {
+                "type": "const",
+                "value": 27
+            },
+            "__main__.ItemNamePrefixes.Gale": {
+                "type": "const",
+                "value": 28
+            },
+            "__main__.ItemNamePrefixes.Ghoul": {
+                "type": "const",
+                "value": 29
+            },
+            "__main__.ItemNamePrefixes.Gloom": {
+                "type": "const",
+                "value": 30
+            },
+            "__main__.ItemNamePrefixes.Glyph": {
+                "type": "const",
+                "value": 31
+            },
+            "__main__.ItemNamePrefixes.Golem": {
+                "type": "const",
+                "value": 32
+            },
+            "__main__.ItemNamePrefixes.Grim": {
+                "type": "const",
+                "value": 33
+            },
+            "__main__.ItemNamePrefixes.Hate": {
+                "type": "const",
+                "value": 34
+            },
+            "__main__.ItemNamePrefixes.Havoc": {
+                "type": "const",
+                "value": 35
+            },
+            "__main__.ItemNamePrefixes.Honour": {
+                "type": "const",
+                "value": 36
+            },
+            "__main__.ItemNamePrefixes.Horror": {
+                "type": "const",
+                "value": 37
+            },
+            "__main__.ItemNamePrefixes.Hypnotic": {
+                "type": "const",
+                "value": 38
+            },
+            "__main__.ItemNamePrefixes.ImplicitArgs": {
+                "full_name": "__main__.ItemNamePrefixes.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.ItemNamePrefixes.Kraken": {
+                "type": "const",
+                "value": 39
+            },
+            "__main__.ItemNamePrefixes.Lights": {
+                "type": "const",
+                "value": 67
+            },
+            "__main__.ItemNamePrefixes.Loath": {
+                "type": "const",
+                "value": 40
+            },
+            "__main__.ItemNamePrefixes.Maelstrom": {
+                "type": "const",
+                "value": 41
+            },
+            "__main__.ItemNamePrefixes.Mind": {
+                "type": "const",
+                "value": 42
+            },
+            "__main__.ItemNamePrefixes.Miracle": {
+                "type": "const",
+                "value": 43
+            },
+            "__main__.ItemNamePrefixes.Morbid": {
+                "type": "const",
+                "value": 44
+            },
+            "__main__.ItemNamePrefixes.Oblivion": {
+                "type": "const",
+                "value": 45
+            },
+            "__main__.ItemNamePrefixes.Onslaught": {
+                "type": "const",
+                "value": 46
+            },
+            "__main__.ItemNamePrefixes.Pain": {
+                "type": "const",
+                "value": 47
+            },
+            "__main__.ItemNamePrefixes.Pandemonium": {
+                "type": "const",
+                "value": 48
+            },
+            "__main__.ItemNamePrefixes.Phoenix": {
+                "type": "const",
+                "value": 49
+            },
+            "__main__.ItemNamePrefixes.Plague": {
+                "type": "const",
+                "value": 50
+            },
+            "__main__.ItemNamePrefixes.Rage": {
+                "type": "const",
+                "value": 51
+            },
+            "__main__.ItemNamePrefixes.Rapture": {
+                "type": "const",
+                "value": 52
+            },
+            "__main__.ItemNamePrefixes.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.ItemNamePrefixes.Rune": {
+                "type": "const",
+                "value": 52
+            },
+            "__main__.ItemNamePrefixes.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.ItemNamePrefixes.Shimmering": {
+                "type": "const",
+                "value": 68
+            },
+            "__main__.ItemNamePrefixes.Skull": {
+                "type": "const",
+                "value": 53
+            },
+            "__main__.ItemNamePrefixes.Sol": {
+                "type": "const",
+                "value": 54
+            },
+            "__main__.ItemNamePrefixes.Sorrow": {
+                "type": "const",
+                "value": 56
+            },
+            "__main__.ItemNamePrefixes.Soul": {
+                "type": "const",
+                "value": 55
+            },
+            "__main__.ItemNamePrefixes.Spirit": {
+                "type": "const",
+                "value": 57
+            },
+            "__main__.ItemNamePrefixes.Storm": {
+                "type": "const",
+                "value": 58
+            },
+            "__main__.ItemNamePrefixes.Tempest": {
+                "type": "const",
+                "value": 59
+            },
+            "__main__.ItemNamePrefixes.Torment": {
+                "type": "const",
+                "value": 60
+            },
+            "__main__.ItemNamePrefixes.Vengeance": {
+                "type": "const",
+                "value": 61
+            },
+            "__main__.ItemNamePrefixes.Victory": {
+                "type": "const",
+                "value": 62
+            },
+            "__main__.ItemNamePrefixes.Viper": {
+                "type": "const",
+                "value": 63
+            },
+            "__main__.ItemNamePrefixes.Vortex": {
+                "type": "const",
+                "value": 64
+            },
+            "__main__.ItemNamePrefixes.Woe": {
+                "type": "const",
+                "value": 65
+            },
+            "__main__.ItemNamePrefixes.Wrath": {
+                "type": "const",
+                "value": 66
+            },
+            "__main__.ItemNameSuffixes": {
+                "type": "namespace"
+            },
+            "__main__.ItemNameSuffixes.Args": {
+                "full_name": "__main__.ItemNameSuffixes.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.ItemNameSuffixes.Bane": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemNameSuffixes.Bender": {
+                "type": "const",
+                "value": 9
+            },
+            "__main__.ItemNameSuffixes.Bite": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemNameSuffixes.Form": {
+                "type": "const",
+                "value": 16
+            },
+            "__main__.ItemNameSuffixes.Glow": {
+                "type": "const",
+                "value": 8
+            },
+            "__main__.ItemNameSuffixes.Grasp": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemNameSuffixes.Growl": {
+                "type": "const",
+                "value": 13
+            },
+            "__main__.ItemNameSuffixes.ImplicitArgs": {
+                "full_name": "__main__.ItemNameSuffixes.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.ItemNameSuffixes.Instrument": {
+                "type": "const",
+                "value": 7
+            },
+            "__main__.ItemNameSuffixes.Moon": {
+                "type": "const",
+                "value": 18
+            },
+            "__main__.ItemNameSuffixes.Peak": {
+                "type": "const",
+                "value": 15
+            },
+            "__main__.ItemNameSuffixes.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.ItemNameSuffixes.Roar": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemNameSuffixes.Root": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemNameSuffixes.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.ItemNameSuffixes.Shadow": {
+                "type": "const",
+                "value": 10
+            },
+            "__main__.ItemNameSuffixes.Shout": {
+                "type": "const",
+                "value": 12
+            },
+            "__main__.ItemNameSuffixes.Song": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemNameSuffixes.Sun": {
+                "type": "const",
+                "value": 17
+            },
+            "__main__.ItemNameSuffixes.Tear": {
+                "type": "const",
+                "value": 14
+            },
+            "__main__.ItemNameSuffixes.Whisper": {
+                "type": "const",
+                "value": 11
+            },
+            "__main__.ItemSlot": {
+                "type": "namespace"
+            },
+            "__main__.ItemSlot.Amulet": {
+                "type": "const",
+                "value": 7
+            },
+            "__main__.ItemSlot.AncientHelm": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemSlot.Args": {
+                "full_name": "__main__.ItemSlot.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.ItemSlot.BoneWand": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.Book": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.BrightsilkSash": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemSlot.BronzeRing": {
+                "type": "const",
+                "value": 8
+            },
+            "__main__.ItemSlot.Cap": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemSlot.ChainBoots": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemSlot.ChainGloves": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemSlot.ChainMail": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemSlot.Chronicle": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.Club": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.Crown": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemSlot.DemonCrown": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemSlot.DemonHusk": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemSlot.DemonhideBelt": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemSlot.DemonhideBoots": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemSlot.DemonsHands": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemSlot.DivineGloves": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemSlot.DivineHood": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemSlot.DivineRobe": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemSlot.DivineSlippers": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemSlot.DragonsCrown": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemSlot.DragonskinArmor": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemSlot.DragonskinBelt": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemSlot.DragonskinBoots": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemSlot.DragonskinGloves": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemSlot.Falchion": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.FullHelm": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemSlot.Gauntlets": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemSlot.GhostWand": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.Gloves": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemSlot.GoldRing": {
+                "type": "const",
+                "value": 8
+            },
+            "__main__.ItemSlot.GraveWand": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.GreatHelm": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemSlot.Greaves": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemSlot.Grimoire": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.HardLeatherArmor": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemSlot.HardLeatherBelt": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemSlot.HardLeatherBoots": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemSlot.HardLeatherGloves": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemSlot.HeavyBelt": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemSlot.HeavyBoots": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemSlot.HeavyGloves": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemSlot.Helm": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemSlot.HolyChestplate": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemSlot.HolyGauntlets": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemSlot.HolyGreaves": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemSlot.Hood": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemSlot.ImplicitArgs": {
+                "full_name": "__main__.ItemSlot.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.ItemSlot.Katana": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.LeatherArmor": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemSlot.LeatherBelt": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemSlot.LeatherBoots": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemSlot.LeatherCap": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemSlot.LeatherGloves": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemSlot.LinenGloves": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemSlot.LinenHood": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemSlot.LinenRobe": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemSlot.LinenSash": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemSlot.LinenShoes": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemSlot.LongSword": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.Mace": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.Maul": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.MeshBelt": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemSlot.Necklace": {
+                "type": "const",
+                "value": 7
+            },
+            "__main__.ItemSlot.OrnateBelt": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemSlot.OrnateChestplate": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemSlot.OrnateGauntlets": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemSlot.OrnateGreaves": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemSlot.OrnateHelm": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemSlot.Pendant": {
+                "type": "const",
+                "value": 7
+            },
+            "__main__.ItemSlot.PlateMail": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemSlot.PlatedBelt": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemSlot.PlatinumRing": {
+                "type": "const",
+                "value": 8
+            },
+            "__main__.ItemSlot.Quarterstaff": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.ItemSlot.RingMail": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemSlot.Robe": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemSlot.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.ItemSlot.Sash": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemSlot.Scimitar": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.Shirt": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemSlot.Shoes": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemSlot.ShortSword": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.SilkGloves": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemSlot.SilkHood": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemSlot.SilkRobe": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemSlot.SilkSash": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemSlot.SilkSlippers": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemSlot.SilverRing": {
+                "type": "const",
+                "value": 8
+            },
+            "__main__.ItemSlot.StuddedLeatherArmor": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemSlot.StuddedLeatherBelt": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemSlot.StuddedLeatherBoots": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemSlot.StuddedLeatherGloves": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemSlot.TitaniumRing": {
+                "type": "const",
+                "value": 8
+            },
+            "__main__.ItemSlot.Tome": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.Wand": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.WarBelt": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemSlot.WarCap": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemSlot.Warhammer": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSlot.WoolGloves": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemSlot.WoolSash": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemSlot.WoolShoes": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemSuffixes": {
+                "type": "namespace"
+            },
+            "__main__.ItemSuffixes.Args": {
+                "full_name": "__main__.ItemSuffixes.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.ItemSuffixes.ImplicitArgs": {
+                "full_name": "__main__.ItemSuffixes.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.ItemSuffixes.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.ItemSuffixes.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.ItemSuffixes.of_Anger": {
+                "type": "const",
+                "value": 9
+            },
+            "__main__.ItemSuffixes.of_Brilliance": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.ItemSuffixes.of_Detection": {
+                "type": "const",
+                "value": 14
+            },
+            "__main__.ItemSuffixes.of_Enlightenment": {
+                "type": "const",
+                "value": 7
+            },
+            "__main__.ItemSuffixes.of_Fury": {
+                "type": "const",
+                "value": 11
+            },
+            "__main__.ItemSuffixes.of_Giant": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.ItemSuffixes.of_Perfection": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.ItemSuffixes.of_Power": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.ItemSuffixes.of_Protection": {
+                "type": "const",
+                "value": 8
+            },
+            "__main__.ItemSuffixes.of_Rage": {
+                "type": "const",
+                "value": 10
+            },
+            "__main__.ItemSuffixes.of_Reflection": {
+                "type": "const",
+                "value": 15
+            },
+            "__main__.ItemSuffixes.of_Skill": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.ItemSuffixes.of_Titans": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.ItemSuffixes.of_Vitriol": {
+                "type": "const",
+                "value": 12
+            },
+            "__main__.ItemSuffixes.of_the_Fox": {
+                "type": "const",
+                "value": 13
+            },
+            "__main__.ItemSuffixes.of_the_Twins": {
+                "type": "const",
+                "value": 16
+            },
+            "__main__.ItemType": {
+                "type": "namespace"
+            },
+            "__main__.ItemType.Amulet": {
+                "type": "const",
+                "value": 400
+            },
+            "__main__.ItemType.AncientHelm": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.Args": {
+                "full_name": "__main__.ItemType.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.ItemType.BoneWand": {
+                "type": "const",
+                "value": 103
+            },
+            "__main__.ItemType.Book": {
+                "type": "const",
+                "value": 103
+            },
+            "__main__.ItemType.BrightsilkSash": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.BronzeRing": {
+                "type": "const",
+                "value": 300
+            },
+            "__main__.ItemType.Cap": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.ChainBoots": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.ChainGloves": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.ChainMail": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.Chronicle": {
+                "type": "const",
+                "value": 103
+            },
+            "__main__.ItemType.Club": {
+                "type": "const",
+                "value": 101
+            },
+            "__main__.ItemType.Crown": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.DemonCrown": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.DemonHusk": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.DemonhideBelt": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.DemonhideBoots": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.DemonsHands": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.DivineGloves": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.DivineHood": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.DivineRobe": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.DivineSlippers": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.DragonsCrown": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.DragonskinArmor": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.DragonskinBelt": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.DragonskinBoots": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.DragonskinGloves": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.Falchion": {
+                "type": "const",
+                "value": 102
+            },
+            "__main__.ItemType.FullHelm": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.Gauntlets": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.GhostWand": {
+                "type": "const",
+                "value": 103
+            },
+            "__main__.ItemType.Gloves": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.GoldRing": {
+                "type": "const",
+                "value": 300
+            },
+            "__main__.ItemType.GraveWand": {
+                "type": "const",
+                "value": 103
+            },
+            "__main__.ItemType.GreatHelm": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.Greaves": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.Grimoire": {
+                "type": "const",
+                "value": 103
+            },
+            "__main__.ItemType.HardLeatherArmor": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.HardLeatherBelt": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.HardLeatherBoots": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.HardLeatherGloves": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.HeavyBelt": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.HeavyBoots": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.HeavyGloves": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.Helm": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.HolyChestplate": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.HolyGauntlets": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.HolyGreaves": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.Hood": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.ImplicitArgs": {
+                "full_name": "__main__.ItemType.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.ItemType.Katana": {
+                "type": "const",
+                "value": 102
+            },
+            "__main__.ItemType.LeatherArmor": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.LeatherBelt": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.LeatherBoots": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.LeatherCap": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.LeatherGloves": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.LinenGloves": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.LinenHood": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.LinenRobe": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.LinenSash": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.LinenShoes": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.LongSword": {
+                "type": "const",
+                "value": 102
+            },
+            "__main__.ItemType.Mace": {
+                "type": "const",
+                "value": 101
+            },
+            "__main__.ItemType.Maul": {
+                "type": "const",
+                "value": 101
+            },
+            "__main__.ItemType.MeshBelt": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.Necklace": {
+                "type": "const",
+                "value": 400
+            },
+            "__main__.ItemType.OrnateBelt": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.OrnateChestplate": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.OrnateGauntlets": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.OrnateGreaves": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.OrnateHelm": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.Pendant": {
+                "type": "const",
+                "value": 400
+            },
+            "__main__.ItemType.PlateMail": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.PlatedBelt": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.PlatinumRing": {
+                "type": "const",
+                "value": 300
+            },
+            "__main__.ItemType.Quarterstaff": {
+                "type": "const",
+                "value": 101
+            },
+            "__main__.ItemType.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.ItemType.RingMail": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.Robe": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.ItemType.Sash": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.Scimitar": {
+                "type": "const",
+                "value": 102
+            },
+            "__main__.ItemType.Shirt": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.Shoes": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.ShortSword": {
+                "type": "const",
+                "value": 102
+            },
+            "__main__.ItemType.SilkGloves": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.SilkHood": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.SilkRobe": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.SilkSash": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.SilkSlippers": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.SilverRing": {
+                "type": "const",
+                "value": 300
+            },
+            "__main__.ItemType.StuddedLeatherArmor": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.StuddedLeatherBelt": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.StuddedLeatherBoots": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.StuddedLeatherGloves": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.TitaniumRing": {
+                "type": "const",
+                "value": 300
+            },
+            "__main__.ItemType.Tome": {
+                "type": "const",
+                "value": 103
+            },
+            "__main__.ItemType.Wand": {
+                "type": "const",
+                "value": 103
+            },
+            "__main__.ItemType.WarBelt": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.ItemType.WarCap": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.ItemType.Warhammer": {
+                "type": "const",
+                "value": 101
+            },
+            "__main__.ItemType.WoolGloves": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.WoolSash": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.ItemType.WoolShoes": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.Material": {
+                "type": "namespace"
+            },
+            "__main__.Material.Args": {
+                "full_name": "__main__.Material.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Biotic": {
+                "type": "namespace"
+            },
+            "__main__.Material.Biotic.Animal": {
+                "type": "namespace"
+            },
+            "__main__.Material.Biotic.Animal.Args": {
+                "full_name": "__main__.Material.Biotic.Animal.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Biotic.Animal.ImplicitArgs": {
+                "full_name": "__main__.Material.Biotic.Animal.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Biotic.Animal.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.Material.Biotic.Animal.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Material.Biotic.Animal.blood": {
+                "type": "const",
+                "value": 3301
+            },
+            "__main__.Material.Biotic.Animal.bones": {
+                "type": "const",
+                "value": 3302
+            },
+            "__main__.Material.Biotic.Animal.brain": {
+                "type": "const",
+                "value": 3303
+            },
+            "__main__.Material.Biotic.Animal.entrails": {
+                "type": "const",
+                "value": 3309
+            },
+            "__main__.Material.Biotic.Animal.eyes": {
+                "type": "const",
+                "value": 3304
+            },
+            "__main__.Material.Biotic.Animal.feet": {
+                "type": "const",
+                "value": 3311
+            },
+            "__main__.Material.Biotic.Animal.flesh": {
+                "type": "const",
+                "value": 3306
+            },
+            "__main__.Material.Biotic.Animal.generic": {
+                "type": "const",
+                "value": 3300
+            },
+            "__main__.Material.Biotic.Animal.hair": {
+                "type": "const",
+                "value": 3307
+            },
+            "__main__.Material.Biotic.Animal.hands": {
+                "type": "const",
+                "value": 3310
+            },
+            "__main__.Material.Biotic.Animal.heart": {
+                "type": "const",
+                "value": 3308
+            },
+            "__main__.Material.Biotic.Animal.hide": {
+                "type": "const",
+                "value": 3305
+            },
+            "__main__.Material.Biotic.Args": {
+                "full_name": "__main__.Material.Biotic.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Biotic.Demon": {
+                "type": "namespace"
+            },
+            "__main__.Material.Biotic.Demon.Args": {
+                "full_name": "__main__.Material.Biotic.Demon.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Biotic.Demon.ImplicitArgs": {
+                "full_name": "__main__.Material.Biotic.Demon.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Biotic.Demon.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.Material.Biotic.Demon.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Material.Biotic.Demon.blood": {
+                "type": "const",
+                "value": 3101
+            },
+            "__main__.Material.Biotic.Demon.bones": {
+                "type": "const",
+                "value": 3102
+            },
+            "__main__.Material.Biotic.Demon.brain": {
+                "type": "const",
+                "value": 3103
+            },
+            "__main__.Material.Biotic.Demon.entrails": {
+                "type": "const",
+                "value": 3109
+            },
+            "__main__.Material.Biotic.Demon.eyes": {
+                "type": "const",
+                "value": 3104
+            },
+            "__main__.Material.Biotic.Demon.feet": {
+                "type": "const",
+                "value": 3111
+            },
+            "__main__.Material.Biotic.Demon.flesh": {
+                "type": "const",
+                "value": 3106
+            },
+            "__main__.Material.Biotic.Demon.generic": {
+                "type": "const",
+                "value": 3100
+            },
+            "__main__.Material.Biotic.Demon.hair": {
+                "type": "const",
+                "value": 3107
+            },
+            "__main__.Material.Biotic.Demon.hands": {
+                "type": "const",
+                "value": 3110
+            },
+            "__main__.Material.Biotic.Demon.heart": {
+                "type": "const",
+                "value": 3108
+            },
+            "__main__.Material.Biotic.Demon.hide": {
+                "type": "const",
+                "value": 3105
+            },
+            "__main__.Material.Biotic.Dragon": {
+                "type": "namespace"
+            },
+            "__main__.Material.Biotic.Dragon.Args": {
+                "full_name": "__main__.Material.Biotic.Dragon.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Biotic.Dragon.ImplicitArgs": {
+                "full_name": "__main__.Material.Biotic.Dragon.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Biotic.Dragon.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.Material.Biotic.Dragon.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Material.Biotic.Dragon.blood": {
+                "type": "const",
+                "value": 3201
+            },
+            "__main__.Material.Biotic.Dragon.bones": {
+                "type": "const",
+                "value": 3202
+            },
+            "__main__.Material.Biotic.Dragon.brain": {
+                "type": "const",
+                "value": 3203
+            },
+            "__main__.Material.Biotic.Dragon.entrails": {
+                "type": "const",
+                "value": 3209
+            },
+            "__main__.Material.Biotic.Dragon.eyes": {
+                "type": "const",
+                "value": 3204
+            },
+            "__main__.Material.Biotic.Dragon.feet": {
+                "type": "const",
+                "value": 3211
+            },
+            "__main__.Material.Biotic.Dragon.flesh": {
+                "type": "const",
+                "value": 3206
+            },
+            "__main__.Material.Biotic.Dragon.generic": {
+                "type": "const",
+                "value": 3200
+            },
+            "__main__.Material.Biotic.Dragon.hair": {
+                "type": "const",
+                "value": 3207
+            },
+            "__main__.Material.Biotic.Dragon.hands": {
+                "type": "const",
+                "value": 3210
+            },
+            "__main__.Material.Biotic.Dragon.heart": {
+                "type": "const",
+                "value": 3208
+            },
+            "__main__.Material.Biotic.Dragon.skin": {
+                "type": "const",
+                "value": 3205
+            },
+            "__main__.Material.Biotic.Human": {
+                "type": "namespace"
+            },
+            "__main__.Material.Biotic.Human.Args": {
+                "full_name": "__main__.Material.Biotic.Human.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Biotic.Human.ImplicitArgs": {
+                "full_name": "__main__.Material.Biotic.Human.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Biotic.Human.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.Material.Biotic.Human.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Material.Biotic.Human.blood": {
+                "type": "const",
+                "value": 3401
+            },
+            "__main__.Material.Biotic.Human.bones": {
+                "type": "const",
+                "value": 3402
+            },
+            "__main__.Material.Biotic.Human.brain": {
+                "type": "const",
+                "value": 3403
+            },
+            "__main__.Material.Biotic.Human.entrails": {
+                "type": "const",
+                "value": 3409
+            },
+            "__main__.Material.Biotic.Human.eyes": {
+                "type": "const",
+                "value": 3404
+            },
+            "__main__.Material.Biotic.Human.feet": {
+                "type": "const",
+                "value": 3411
+            },
+            "__main__.Material.Biotic.Human.flesh": {
+                "type": "const",
+                "value": 3406
+            },
+            "__main__.Material.Biotic.Human.generic": {
+                "type": "const",
+                "value": 3400
+            },
+            "__main__.Material.Biotic.Human.hair": {
+                "type": "const",
+                "value": 3407
+            },
+            "__main__.Material.Biotic.Human.hands": {
+                "type": "const",
+                "value": 3410
+            },
+            "__main__.Material.Biotic.Human.heart": {
+                "type": "const",
+                "value": 3408
+            },
+            "__main__.Material.Biotic.Human.hide": {
+                "type": "const",
+                "value": 3405
+            },
+            "__main__.Material.Biotic.ImplicitArgs": {
+                "full_name": "__main__.Material.Biotic.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Biotic.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.Material.Biotic.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Material.Biotic.generic": {
+                "type": "const",
+                "value": 3000
+            },
+            "__main__.Material.Cloth": {
+                "type": "namespace"
+            },
+            "__main__.Material.Cloth.Args": {
+                "full_name": "__main__.Material.Cloth.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Cloth.ImplicitArgs": {
+                "full_name": "__main__.Material.Cloth.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Cloth.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.Material.Cloth.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Material.Cloth.brightsilk": {
+                "type": "const",
+                "value": 2003
+            },
+            "__main__.Material.Cloth.divine": {
+                "type": "const",
+                "value": 2002
+            },
+            "__main__.Material.Cloth.generic": {
+                "type": "const",
+                "value": 2000
+            },
+            "__main__.Material.Cloth.linen": {
+                "type": "const",
+                "value": 2006
+            },
+            "__main__.Material.Cloth.royal": {
+                "type": "const",
+                "value": 2001
+            },
+            "__main__.Material.Cloth.silk": {
+                "type": "const",
+                "value": 2004
+            },
+            "__main__.Material.Cloth.wool": {
+                "type": "const",
+                "value": 2005
+            },
+            "__main__.Material.ImplicitArgs": {
+                "full_name": "__main__.Material.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Metal": {
+                "type": "namespace"
+            },
+            "__main__.Material.Metal.Args": {
+                "full_name": "__main__.Material.Metal.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Metal.ImplicitArgs": {
+                "full_name": "__main__.Material.Metal.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Metal.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.Material.Metal.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Material.Metal.ancient": {
+                "type": "const",
+                "value": 1001
+            },
+            "__main__.Material.Metal.bronze": {
+                "type": "const",
+                "value": 1006
+            },
+            "__main__.Material.Metal.generic": {
+                "type": "const",
+                "value": 1000
+            },
+            "__main__.Material.Metal.gold": {
+                "type": "const",
+                "value": 1004
+            },
+            "__main__.Material.Metal.holy": {
+                "type": "const",
+                "value": 1002
+            },
+            "__main__.Material.Metal.ornate": {
+                "type": "const",
+                "value": 1003
+            },
+            "__main__.Material.Metal.platinum": {
+                "type": "const",
+                "value": 1007
+            },
+            "__main__.Material.Metal.silver": {
+                "type": "const",
+                "value": 1005
+            },
+            "__main__.Material.Metal.steel": {
+                "type": "const",
+                "value": 1009
+            },
+            "__main__.Material.Metal.titanium": {
+                "type": "const",
+                "value": 1008
+            },
+            "__main__.Material.Paper": {
+                "type": "namespace"
+            },
+            "__main__.Material.Paper.Args": {
+                "full_name": "__main__.Material.Paper.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Paper.ImplicitArgs": {
+                "full_name": "__main__.Material.Paper.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Paper.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.Material.Paper.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Material.Paper.generic": {
+                "type": "const",
+                "value": 4000
+            },
+            "__main__.Material.Paper.magical": {
+                "type": "const",
+                "value": 4001
+            },
+            "__main__.Material.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.Material.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Material.Wood": {
+                "type": "namespace"
+            },
+            "__main__.Material.Wood.Args": {
+                "full_name": "__main__.Material.Wood.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Wood.Hard": {
+                "type": "namespace"
+            },
+            "__main__.Material.Wood.Hard.Args": {
+                "full_name": "__main__.Material.Wood.Hard.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Wood.Hard.ImplicitArgs": {
+                "full_name": "__main__.Material.Wood.Hard.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Wood.Hard.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.Material.Wood.Hard.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Material.Wood.Hard.balsa": {
+                "type": "const",
+                "value": 5107
+            },
+            "__main__.Material.Wood.Hard.birch": {
+                "type": "const",
+                "value": 5108
+            },
+            "__main__.Material.Wood.Hard.cherry": {
+                "type": "const",
+                "value": 5106
+            },
+            "__main__.Material.Wood.Hard.generic": {
+                "type": "const",
+                "value": 5100
+            },
+            "__main__.Material.Wood.Hard.holly": {
+                "type": "const",
+                "value": 5109
+            },
+            "__main__.Material.Wood.Hard.mahogany": {
+                "type": "const",
+                "value": 5102
+            },
+            "__main__.Material.Wood.Hard.maple": {
+                "type": "const",
+                "value": 5103
+            },
+            "__main__.Material.Wood.Hard.oak": {
+                "type": "const",
+                "value": 5104
+            },
+            "__main__.Material.Wood.Hard.rosewood": {
+                "type": "const",
+                "value": 5105
+            },
+            "__main__.Material.Wood.Hard.walnut": {
+                "type": "const",
+                "value": 5101
+            },
+            "__main__.Material.Wood.ImplicitArgs": {
+                "full_name": "__main__.Material.Wood.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Wood.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.Material.Wood.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Material.Wood.Soft": {
+                "type": "namespace"
+            },
+            "__main__.Material.Wood.Soft.Args": {
+                "full_name": "__main__.Material.Wood.Soft.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Wood.Soft.ImplicitArgs": {
+                "full_name": "__main__.Material.Wood.Soft.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Material.Wood.Soft.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.Material.Wood.Soft.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Material.Wood.Soft.cedar": {
+                "type": "const",
+                "value": 5201
+            },
+            "__main__.Material.Wood.Soft.elder": {
+                "type": "const",
+                "value": 5206
+            },
+            "__main__.Material.Wood.Soft.fir": {
+                "type": "const",
+                "value": 5203
+            },
+            "__main__.Material.Wood.Soft.generic": {
+                "type": "const",
+                "value": 5200
+            },
+            "__main__.Material.Wood.Soft.hemlock": {
+                "type": "const",
+                "value": 5204
+            },
+            "__main__.Material.Wood.Soft.pine": {
+                "type": "const",
+                "value": 5202
+            },
+            "__main__.Material.Wood.Soft.spruce": {
+                "type": "const",
+                "value": 5205
+            },
+            "__main__.Material.Wood.Soft.yew": {
+                "type": "const",
+                "value": 5207
+            },
+            "__main__.Material.Wood.generic": {
+                "type": "const",
+                "value": 5000
+            },
+            "__main__.Material.generic": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Slot": {
+                "type": "namespace"
+            },
+            "__main__.Slot.Args": {
+                "full_name": "__main__.Slot.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Slot.Chest": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.Slot.Foot": {
+                "type": "const",
+                "value": 5
+            },
+            "__main__.Slot.Hand": {
+                "type": "const",
+                "value": 6
+            },
+            "__main__.Slot.Head": {
+                "type": "const",
+                "value": 3
+            },
+            "__main__.Slot.ImplicitArgs": {
+                "full_name": "__main__.Slot.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Slot.Neck": {
+                "type": "const",
+                "value": 7
+            },
+            "__main__.Slot.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.Slot.Ring": {
+                "type": "const",
+                "value": 8
+            },
+            "__main__.Slot.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Slot.Waist": {
+                "type": "const",
+                "value": 4
+            },
+            "__main__.Slot.Weapon": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.State": {
+                "type": "namespace"
+            },
+            "__main__.State.Args": {
+                "full_name": "__main__.State.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.State.Bagged": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.State.Equipped": {
+                "type": "const",
+                "value": 1
+            },
+            "__main__.State.ImplicitArgs": {
+                "full_name": "__main__.State.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.State.Loose": {
+                "type": "const",
+                "value": 2
+            },
+            "__main__.State.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.State.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Type": {
+                "type": "namespace"
+            },
+            "__main__.Type.Args": {
+                "full_name": "__main__.Type.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Type.Armor": {
+                "type": "namespace"
+            },
+            "__main__.Type.Armor.Args": {
+                "full_name": "__main__.Type.Armor.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Type.Armor.ImplicitArgs": {
+                "full_name": "__main__.Type.Armor.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Type.Armor.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.Type.Armor.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Type.Armor.cloth": {
+                "type": "const",
+                "value": 203
+            },
+            "__main__.Type.Armor.generic": {
+                "type": "const",
+                "value": 200
+            },
+            "__main__.Type.Armor.hide": {
+                "type": "const",
+                "value": 202
+            },
+            "__main__.Type.Armor.metal": {
+                "type": "const",
+                "value": 201
+            },
+            "__main__.Type.ImplicitArgs": {
+                "full_name": "__main__.Type.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Type.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.Type.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Type.Weapon": {
+                "type": "namespace"
+            },
+            "__main__.Type.Weapon.Args": {
+                "full_name": "__main__.Type.Weapon.Args",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Type.Weapon.ImplicitArgs": {
+                "full_name": "__main__.Type.Weapon.ImplicitArgs",
+                "members": {},
+                "size": 0,
+                "type": "struct"
+            },
+            "__main__.Type.Weapon.Return": {
+                "cairo_type": "()",
+                "type": "type_definition"
+            },
+            "__main__.Type.Weapon.SIZEOF_LOCALS": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Type.Weapon.blade": {
+                "type": "const",
+                "value": 102
+            },
+            "__main__.Type.Weapon.bludgeon": {
+                "type": "const",
+                "value": 101
+            },
+            "__main__.Type.Weapon.generic": {
+                "type": "const",
+                "value": 100
+            },
+            "__main__.Type.Weapon.magic": {
+                "type": "const",
+                "value": 103
+            },
+            "__main__.Type.generic": {
+                "type": "const",
+                "value": 0
+            },
+            "__main__.Type.neckalce": {
+                "type": "const",
+                "value": 400
+            },
+            "__main__.Type.ring": {
+                "type": "const",
+                "value": 300
+            },
+            "starkware.cairo.common.bool.FALSE": {
+                "type": "const",
+                "value": 0
+            },
+            "starkware.cairo.common.bool.TRUE": {
+                "type": "const",
+                "value": 1
+            },
+            "starkware.cairo.common.cairo_builtins.BitwiseBuiltin": {
+                "full_name": "starkware.cairo.common.cairo_builtins.BitwiseBuiltin",
+                "members": {
+                    "x": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    },
+                    "x_and_y": {
+                        "cairo_type": "felt",
+                        "offset": 2
+                    },
+                    "x_or_y": {
+                        "cairo_type": "felt",
+                        "offset": 4
+                    },
+                    "x_xor_y": {
+                        "cairo_type": "felt",
+                        "offset": 3
+                    },
+                    "y": {
+                        "cairo_type": "felt",
+                        "offset": 1
+                    }
+                },
+                "size": 5,
+                "type": "struct"
+            },
+            "starkware.cairo.common.cairo_builtins.EcOpBuiltin": {
+                "full_name": "starkware.cairo.common.cairo_builtins.EcOpBuiltin",
+                "members": {
+                    "m": {
+                        "cairo_type": "felt",
+                        "offset": 4
+                    },
+                    "p": {
+                        "cairo_type": "starkware.cairo.common.ec_point.EcPoint",
+                        "offset": 0
+                    },
+                    "q": {
+                        "cairo_type": "starkware.cairo.common.ec_point.EcPoint",
+                        "offset": 2
+                    },
+                    "r": {
+                        "cairo_type": "starkware.cairo.common.ec_point.EcPoint",
+                        "offset": 5
+                    }
+                },
+                "size": 7,
+                "type": "struct"
+            },
+            "starkware.cairo.common.cairo_builtins.EcPoint": {
+                "destination": "starkware.cairo.common.ec_point.EcPoint",
+                "type": "alias"
+            },
+            "starkware.cairo.common.cairo_builtins.HashBuiltin": {
+                "full_name": "starkware.cairo.common.cairo_builtins.HashBuiltin",
+                "members": {
+                    "result": {
+                        "cairo_type": "felt",
+                        "offset": 2
+                    },
+                    "x": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    },
+                    "y": {
+                        "cairo_type": "felt",
+                        "offset": 1
+                    }
+                },
+                "size": 3,
+                "type": "struct"
+            },
+            "starkware.cairo.common.cairo_builtins.KeccakBuiltin": {
+                "full_name": "starkware.cairo.common.cairo_builtins.KeccakBuiltin",
+                "members": {
+                    "input": {
+                        "cairo_type": "starkware.cairo.common.keccak_state.KeccakBuiltinState",
+                        "offset": 0
+                    },
+                    "output": {
+                        "cairo_type": "starkware.cairo.common.keccak_state.KeccakBuiltinState",
+                        "offset": 8
+                    }
+                },
+                "size": 16,
+                "type": "struct"
+            },
+            "starkware.cairo.common.cairo_builtins.KeccakBuiltinState": {
+                "destination": "starkware.cairo.common.keccak_state.KeccakBuiltinState",
+                "type": "alias"
+            },
+            "starkware.cairo.common.cairo_builtins.SignatureBuiltin": {
+                "full_name": "starkware.cairo.common.cairo_builtins.SignatureBuiltin",
+                "members": {
+                    "message": {
+                        "cairo_type": "felt",
+                        "offset": 1
+                    },
+                    "pub_key": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 2,
+                "type": "struct"
+            },
+            "starkware.cairo.common.dict_access.DictAccess": {
+                "full_name": "starkware.cairo.common.dict_access.DictAccess",
+                "members": {
+                    "key": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    },
+                    "new_value": {
+                        "cairo_type": "felt",
+                        "offset": 2
+                    },
+                    "prev_value": {
+                        "cairo_type": "felt",
+                        "offset": 1
+                    }
+                },
+                "size": 3,
+                "type": "struct"
+            },
+            "starkware.cairo.common.ec_point.EcPoint": {
+                "full_name": "starkware.cairo.common.ec_point.EcPoint",
+                "members": {
+                    "x": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    },
+                    "y": {
+                        "cairo_type": "felt",
+                        "offset": 1
+                    }
+                },
+                "size": 2,
+                "type": "struct"
+            },
+            "starkware.cairo.common.hash.HashBuiltin": {
+                "destination": "starkware.cairo.common.cairo_builtins.HashBuiltin",
+                "type": "alias"
+            },
+            "starkware.cairo.common.keccak_state.KeccakBuiltinState": {
+                "full_name": "starkware.cairo.common.keccak_state.KeccakBuiltinState",
+                "members": {
+                    "s0": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    },
+                    "s1": {
+                        "cairo_type": "felt",
+                        "offset": 1
+                    },
+                    "s2": {
+                        "cairo_type": "felt",
+                        "offset": 2
+                    },
+                    "s3": {
+                        "cairo_type": "felt",
+                        "offset": 3
+                    },
+                    "s4": {
+                        "cairo_type": "felt",
+                        "offset": 4
+                    },
+                    "s5": {
+                        "cairo_type": "felt",
+                        "offset": 5
+                    },
+                    "s6": {
+                        "cairo_type": "felt",
+                        "offset": 6
+                    },
+                    "s7": {
+                        "cairo_type": "felt",
+                        "offset": 7
+                    }
+                },
+                "size": 8,
+                "type": "struct"
+            },
+            "starkware.cairo.common.math.FALSE": {
+                "destination": "starkware.cairo.common.bool.FALSE",
+                "type": "alias"
+            },
+            "starkware.cairo.common.math.TRUE": {
+                "destination": "starkware.cairo.common.bool.TRUE",
+                "type": "alias"
+            },
+            "starkware.starknet.common.storage.ADDR_BOUND": {
+                "type": "const",
+                "value": -106710729501573572985208420194530329073740042555888586719489
+            },
+            "starkware.starknet.common.storage.MAX_STORAGE_ITEM_SIZE": {
+                "type": "const",
+                "value": 256
+            },
+            "starkware.starknet.common.storage.assert_250_bit": {
+                "destination": "starkware.cairo.common.math.assert_250_bit",
+                "type": "alias"
+            },
+            "starkware.starknet.common.syscalls.CALL_CONTRACT_SELECTOR": {
+                "type": "const",
+                "value": 20853273475220472486191784820
+            },
+            "starkware.starknet.common.syscalls.CallContract": {
+                "full_name": "starkware.starknet.common.syscalls.CallContract",
+                "members": {
+                    "request": {
+                        "cairo_type": "starkware.starknet.common.syscalls.CallContractRequest",
+                        "offset": 0
+                    },
+                    "response": {
+                        "cairo_type": "starkware.starknet.common.syscalls.CallContractResponse",
+                        "offset": 5
+                    }
+                },
+                "size": 7,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.CallContractRequest": {
+                "full_name": "starkware.starknet.common.syscalls.CallContractRequest",
+                "members": {
+                    "calldata": {
+                        "cairo_type": "felt*",
+                        "offset": 4
+                    },
+                    "calldata_size": {
+                        "cairo_type": "felt",
+                        "offset": 3
+                    },
+                    "contract_address": {
+                        "cairo_type": "felt",
+                        "offset": 1
+                    },
+                    "function_selector": {
+                        "cairo_type": "felt",
+                        "offset": 2
+                    },
+                    "selector": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 5,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.CallContractResponse": {
+                "full_name": "starkware.starknet.common.syscalls.CallContractResponse",
+                "members": {
+                    "retdata": {
+                        "cairo_type": "felt*",
+                        "offset": 1
+                    },
+                    "retdata_size": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 2,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.DELEGATE_CALL_SELECTOR": {
+                "type": "const",
+                "value": 21167594061783206823196716140
+            },
+            "starkware.starknet.common.syscalls.DELEGATE_L1_HANDLER_SELECTOR": {
+                "type": "const",
+                "value": 23274015802972845247556842986379118667122
+            },
+            "starkware.starknet.common.syscalls.DEPLOY_SELECTOR": {
+                "type": "const",
+                "value": 75202468540281
+            },
+            "starkware.starknet.common.syscalls.Deploy": {
+                "full_name": "starkware.starknet.common.syscalls.Deploy",
+                "members": {
+                    "request": {
+                        "cairo_type": "starkware.starknet.common.syscalls.DeployRequest",
+                        "offset": 0
+                    },
+                    "response": {
+                        "cairo_type": "starkware.starknet.common.syscalls.DeployResponse",
+                        "offset": 6
+                    }
+                },
+                "size": 9,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.DeployRequest": {
+                "full_name": "starkware.starknet.common.syscalls.DeployRequest",
+                "members": {
+                    "class_hash": {
+                        "cairo_type": "felt",
+                        "offset": 1
+                    },
+                    "constructor_calldata": {
+                        "cairo_type": "felt*",
+                        "offset": 4
+                    },
+                    "constructor_calldata_size": {
+                        "cairo_type": "felt",
+                        "offset": 3
+                    },
+                    "contract_address_salt": {
+                        "cairo_type": "felt",
+                        "offset": 2
+                    },
+                    "deploy_from_zero": {
+                        "cairo_type": "felt",
+                        "offset": 5
+                    },
+                    "selector": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 6,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.DeployResponse": {
+                "full_name": "starkware.starknet.common.syscalls.DeployResponse",
+                "members": {
+                    "constructor_retdata": {
+                        "cairo_type": "felt*",
+                        "offset": 2
+                    },
+                    "constructor_retdata_size": {
+                        "cairo_type": "felt",
+                        "offset": 1
+                    },
+                    "contract_address": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 3,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.DictAccess": {
+                "destination": "starkware.cairo.common.dict_access.DictAccess",
+                "type": "alias"
+            },
+            "starkware.starknet.common.syscalls.EMIT_EVENT_SELECTOR": {
+                "type": "const",
+                "value": 1280709301550335749748
+            },
+            "starkware.starknet.common.syscalls.EmitEvent": {
+                "full_name": "starkware.starknet.common.syscalls.EmitEvent",
+                "members": {
+                    "data": {
+                        "cairo_type": "felt*",
+                        "offset": 4
+                    },
+                    "data_len": {
+                        "cairo_type": "felt",
+                        "offset": 3
+                    },
+                    "keys": {
+                        "cairo_type": "felt*",
+                        "offset": 2
+                    },
+                    "keys_len": {
+                        "cairo_type": "felt",
+                        "offset": 1
+                    },
+                    "selector": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 5,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GET_BLOCK_NUMBER_SELECTOR": {
+                "type": "const",
+                "value": 1448089106835523001438702345020786
+            },
+            "starkware.starknet.common.syscalls.GET_BLOCK_TIMESTAMP_SELECTOR": {
+                "type": "const",
+                "value": 24294903732626645868215235778792757751152
+            },
+            "starkware.starknet.common.syscalls.GET_CALLER_ADDRESS_SELECTOR": {
+                "type": "const",
+                "value": 94901967781393078444254803017658102643
+            },
+            "starkware.starknet.common.syscalls.GET_CONTRACT_ADDRESS_SELECTOR": {
+                "type": "const",
+                "value": 6219495360805491471215297013070624192820083
+            },
+            "starkware.starknet.common.syscalls.GET_SEQUENCER_ADDRESS_SELECTOR": {
+                "type": "const",
+                "value": 1592190833581991703053805829594610833820054387
+            },
+            "starkware.starknet.common.syscalls.GET_TX_INFO_SELECTOR": {
+                "type": "const",
+                "value": 1317029390204112103023
+            },
+            "starkware.starknet.common.syscalls.GET_TX_SIGNATURE_SELECTOR": {
+                "type": "const",
+                "value": 1448089128652340074717162277007973
+            },
+            "starkware.starknet.common.syscalls.GetBlockNumber": {
+                "full_name": "starkware.starknet.common.syscalls.GetBlockNumber",
+                "members": {
+                    "request": {
+                        "cairo_type": "starkware.starknet.common.syscalls.GetBlockNumberRequest",
+                        "offset": 0
+                    },
+                    "response": {
+                        "cairo_type": "starkware.starknet.common.syscalls.GetBlockNumberResponse",
+                        "offset": 1
+                    }
+                },
+                "size": 2,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetBlockNumberRequest": {
+                "full_name": "starkware.starknet.common.syscalls.GetBlockNumberRequest",
+                "members": {
+                    "selector": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 1,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetBlockNumberResponse": {
+                "full_name": "starkware.starknet.common.syscalls.GetBlockNumberResponse",
+                "members": {
+                    "block_number": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 1,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetBlockTimestamp": {
+                "full_name": "starkware.starknet.common.syscalls.GetBlockTimestamp",
+                "members": {
+                    "request": {
+                        "cairo_type": "starkware.starknet.common.syscalls.GetBlockTimestampRequest",
+                        "offset": 0
+                    },
+                    "response": {
+                        "cairo_type": "starkware.starknet.common.syscalls.GetBlockTimestampResponse",
+                        "offset": 1
+                    }
+                },
+                "size": 2,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetBlockTimestampRequest": {
+                "full_name": "starkware.starknet.common.syscalls.GetBlockTimestampRequest",
+                "members": {
+                    "selector": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 1,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetBlockTimestampResponse": {
+                "full_name": "starkware.starknet.common.syscalls.GetBlockTimestampResponse",
+                "members": {
+                    "block_timestamp": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 1,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetCallerAddress": {
+                "full_name": "starkware.starknet.common.syscalls.GetCallerAddress",
+                "members": {
+                    "request": {
+                        "cairo_type": "starkware.starknet.common.syscalls.GetCallerAddressRequest",
+                        "offset": 0
+                    },
+                    "response": {
+                        "cairo_type": "starkware.starknet.common.syscalls.GetCallerAddressResponse",
+                        "offset": 1
+                    }
+                },
+                "size": 2,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetCallerAddressRequest": {
+                "full_name": "starkware.starknet.common.syscalls.GetCallerAddressRequest",
+                "members": {
+                    "selector": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 1,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetCallerAddressResponse": {
+                "full_name": "starkware.starknet.common.syscalls.GetCallerAddressResponse",
+                "members": {
+                    "caller_address": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 1,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetContractAddress": {
+                "full_name": "starkware.starknet.common.syscalls.GetContractAddress",
+                "members": {
+                    "request": {
+                        "cairo_type": "starkware.starknet.common.syscalls.GetContractAddressRequest",
+                        "offset": 0
+                    },
+                    "response": {
+                        "cairo_type": "starkware.starknet.common.syscalls.GetContractAddressResponse",
+                        "offset": 1
+                    }
+                },
+                "size": 2,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetContractAddressRequest": {
+                "full_name": "starkware.starknet.common.syscalls.GetContractAddressRequest",
+                "members": {
+                    "selector": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 1,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetContractAddressResponse": {
+                "full_name": "starkware.starknet.common.syscalls.GetContractAddressResponse",
+                "members": {
+                    "contract_address": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 1,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetSequencerAddress": {
+                "full_name": "starkware.starknet.common.syscalls.GetSequencerAddress",
+                "members": {
+                    "request": {
+                        "cairo_type": "starkware.starknet.common.syscalls.GetSequencerAddressRequest",
+                        "offset": 0
+                    },
+                    "response": {
+                        "cairo_type": "starkware.starknet.common.syscalls.GetSequencerAddressResponse",
+                        "offset": 1
+                    }
+                },
+                "size": 2,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetSequencerAddressRequest": {
+                "full_name": "starkware.starknet.common.syscalls.GetSequencerAddressRequest",
+                "members": {
+                    "selector": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 1,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetSequencerAddressResponse": {
+                "full_name": "starkware.starknet.common.syscalls.GetSequencerAddressResponse",
+                "members": {
+                    "sequencer_address": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 1,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetTxInfo": {
+                "full_name": "starkware.starknet.common.syscalls.GetTxInfo",
+                "members": {
+                    "request": {
+                        "cairo_type": "starkware.starknet.common.syscalls.GetTxInfoRequest",
+                        "offset": 0
+                    },
+                    "response": {
+                        "cairo_type": "starkware.starknet.common.syscalls.GetTxInfoResponse",
+                        "offset": 1
+                    }
+                },
+                "size": 2,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetTxInfoRequest": {
+                "full_name": "starkware.starknet.common.syscalls.GetTxInfoRequest",
+                "members": {
+                    "selector": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 1,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetTxInfoResponse": {
+                "full_name": "starkware.starknet.common.syscalls.GetTxInfoResponse",
+                "members": {
+                    "tx_info": {
+                        "cairo_type": "starkware.starknet.common.syscalls.TxInfo*",
+                        "offset": 0
+                    }
+                },
+                "size": 1,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetTxSignature": {
+                "full_name": "starkware.starknet.common.syscalls.GetTxSignature",
+                "members": {
+                    "request": {
+                        "cairo_type": "starkware.starknet.common.syscalls.GetTxSignatureRequest",
+                        "offset": 0
+                    },
+                    "response": {
+                        "cairo_type": "starkware.starknet.common.syscalls.GetTxSignatureResponse",
+                        "offset": 1
+                    }
+                },
+                "size": 3,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetTxSignatureRequest": {
+                "full_name": "starkware.starknet.common.syscalls.GetTxSignatureRequest",
+                "members": {
+                    "selector": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 1,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.GetTxSignatureResponse": {
+                "full_name": "starkware.starknet.common.syscalls.GetTxSignatureResponse",
+                "members": {
+                    "signature": {
+                        "cairo_type": "felt*",
+                        "offset": 1
+                    },
+                    "signature_len": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 2,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.LIBRARY_CALL_L1_HANDLER_SELECTOR": {
+                "type": "const",
+                "value": 436233452754198157705746250789557519228244616562
+            },
+            "starkware.starknet.common.syscalls.LIBRARY_CALL_SELECTOR": {
+                "type": "const",
+                "value": 92376026794327011772951660
+            },
+            "starkware.starknet.common.syscalls.LibraryCall": {
+                "full_name": "starkware.starknet.common.syscalls.LibraryCall",
+                "members": {
+                    "request": {
+                        "cairo_type": "starkware.starknet.common.syscalls.LibraryCallRequest",
+                        "offset": 0
+                    },
+                    "response": {
+                        "cairo_type": "starkware.starknet.common.syscalls.CallContractResponse",
+                        "offset": 5
+                    }
+                },
+                "size": 7,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.LibraryCallRequest": {
+                "full_name": "starkware.starknet.common.syscalls.LibraryCallRequest",
+                "members": {
+                    "calldata": {
+                        "cairo_type": "felt*",
+                        "offset": 4
+                    },
+                    "calldata_size": {
+                        "cairo_type": "felt",
+                        "offset": 3
+                    },
+                    "class_hash": {
+                        "cairo_type": "felt",
+                        "offset": 1
+                    },
+                    "function_selector": {
+                        "cairo_type": "felt",
+                        "offset": 2
+                    },
+                    "selector": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 5,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.SEND_MESSAGE_TO_L1_SELECTOR": {
+                "type": "const",
+                "value": 433017908768303439907196859243777073
+            },
+            "starkware.starknet.common.syscalls.STORAGE_READ_SELECTOR": {
+                "type": "const",
+                "value": 100890693370601760042082660
+            },
+            "starkware.starknet.common.syscalls.STORAGE_WRITE_SELECTOR": {
+                "type": "const",
+                "value": 25828017502874050592466629733
+            },
+            "starkware.starknet.common.syscalls.SendMessageToL1SysCall": {
+                "full_name": "starkware.starknet.common.syscalls.SendMessageToL1SysCall",
+                "members": {
+                    "payload_ptr": {
+                        "cairo_type": "felt*",
+                        "offset": 3
+                    },
+                    "payload_size": {
+                        "cairo_type": "felt",
+                        "offset": 2
+                    },
+                    "selector": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    },
+                    "to_address": {
+                        "cairo_type": "felt",
+                        "offset": 1
+                    }
+                },
+                "size": 4,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.StorageRead": {
+                "full_name": "starkware.starknet.common.syscalls.StorageRead",
+                "members": {
+                    "request": {
+                        "cairo_type": "starkware.starknet.common.syscalls.StorageReadRequest",
+                        "offset": 0
+                    },
+                    "response": {
+                        "cairo_type": "starkware.starknet.common.syscalls.StorageReadResponse",
+                        "offset": 2
+                    }
+                },
+                "size": 3,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.StorageReadRequest": {
+                "full_name": "starkware.starknet.common.syscalls.StorageReadRequest",
+                "members": {
+                    "address": {
+                        "cairo_type": "felt",
+                        "offset": 1
+                    },
+                    "selector": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 2,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.StorageReadResponse": {
+                "full_name": "starkware.starknet.common.syscalls.StorageReadResponse",
+                "members": {
+                    "value": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 1,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.StorageWrite": {
+                "full_name": "starkware.starknet.common.syscalls.StorageWrite",
+                "members": {
+                    "address": {
+                        "cairo_type": "felt",
+                        "offset": 1
+                    },
+                    "selector": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    },
+                    "value": {
+                        "cairo_type": "felt",
+                        "offset": 2
+                    }
+                },
+                "size": 3,
+                "type": "struct"
+            },
+            "starkware.starknet.common.syscalls.TxInfo": {
+                "full_name": "starkware.starknet.common.syscalls.TxInfo",
+                "members": {
+                    "account_contract_address": {
+                        "cairo_type": "felt",
+                        "offset": 1
+                    },
+                    "chain_id": {
+                        "cairo_type": "felt",
+                        "offset": 6
+                    },
+                    "max_fee": {
+                        "cairo_type": "felt",
+                        "offset": 2
+                    },
+                    "nonce": {
+                        "cairo_type": "felt",
+                        "offset": 7
+                    },
+                    "signature": {
+                        "cairo_type": "felt*",
+                        "offset": 4
+                    },
+                    "signature_len": {
+                        "cairo_type": "felt",
+                        "offset": 3
+                    },
+                    "transaction_hash": {
+                        "cairo_type": "felt",
+                        "offset": 5
+                    },
+                    "version": {
+                        "cairo_type": "felt",
+                        "offset": 0
+                    }
+                },
+                "size": 8,
+                "type": "struct"
+            }
+        },
+        "main_scope": "__main__",
+        "prime": "0x800000000000011000000000000000000000000000000000000000000000001",
+        "reference_manager": {
+            "references": []
+        }
+    }
+}

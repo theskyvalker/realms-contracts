@@ -1,0 +1,4 @@
+
+❌ Cannot find STARKNET_PRIVATE_KEY in env.
+Check spelling and that it exists.
+Try moving the .env to the root of your project.

@@ -98,3 +98,45 @@ namespace SHIFT_ARMY {
     const _15 = 2 ** 84;
     const _16 = 2 ** 91;
 }
+
+const MAX_HEALTH = 100; // the max health of a battalion
+
+// Goblin Armies have lower starting health
+
+namespace GoblinHealth{
+    const LightCavalry = 50;
+    const HeavyCavalry = 60;
+    const Archer = 60;
+    const Longbow = 70;
+    const Mage = 40;
+    const Arcanist = 40;
+    const LightInfantry = 80;
+    const HeavyInfantry = 90;
+}
+
+namespace GoblinHealthMods{
+
+    // provides the maximum health that can be added to not exceed MAX_HEALTH (100)
+
+    const LightCavalry = MAX_HEALTH - GoblinHealth.LightCavalry;
+    const HeavyCavalry = MAX_HEALTH - GoblinHealth.HeavyCavalry;
+    const Archer = MAX_HEALTH - GoblinHealth.Archer;
+    const Longbow = MAX_HEALTH - GoblinHealth.Longbow;
+    const Mage = MAX_HEALTH - GoblinHealth.Mage;
+    const Arcanist = MAX_HEALTH - GoblinHealth.Arcanist;
+    const LightInfantry = MAX_HEALTH - GoblinHealth.LightInfantry;
+    const HeavyInfantry = MAX_HEALTH - GoblinHealth.HeavyInfantry;
+
+    // above values divided by 10 to facilitate randomly assigning health mods to a
+    // generated hobgoblin general in goblintown/library
+    // assumption -> MAX_HEALTH = 100
+
+    const LIGHT_CAVALRY_UNITS = 5;
+    const HEAVY_CAVALRY_UNITS = 4;
+    const ARCHER_UNITS = 4;
+    const LONGBOW_UNITS = 3;
+    const MAGE_UNITS = 6;
+    const ARCANIST_UNITS = 6;
+    const LIGHT_INFANTRY_UNITS = 2;
+    const HEAVY_INFANTRY_UNITS = 1;
+}

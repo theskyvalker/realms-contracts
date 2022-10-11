@@ -81,6 +81,24 @@ func CombatStart_4(
 }
 
 @event
+func CombatStart_goblins(
+    attacking_army: Army,
+    defending_army_id: felt,
+    defending_realm_id: Uint256,
+    defending_army: Army,
+) {
+}
+
+@event
+func CombatStart_goblins_siege(
+    attacking_army_id: felt,
+    attacking_realm_id: Uint256,
+    attacking_army: Army,
+    defending_army: Army,
+) {
+}
+
+@event
 func CombatEnd_4(
     combat_outcome: felt,
     attacking_army_id: felt,
@@ -88,6 +106,26 @@ func CombatEnd_4(
     attacking_army: Army,
     defending_army_id: felt,
     defending_realm_id: Uint256,
+    defending_army: Army,
+) {
+}
+
+@event
+func CombatEnd_goblins(
+    attacking_army: Army,
+    combat_outcome: felt,
+    defending_army_id: felt,
+    defending_realm_id: Uint256,
+    defending_army: Army,
+) {
+}
+
+@event
+func CombatEnd_goblins_siege(
+    attacking_army_id: felt,
+    attacking_army: Army,
+    attacking_realm_id: Uint256,
+    combat_outcome: felt,
     defending_army: Army,
 ) {
 }
@@ -122,6 +160,10 @@ func battalion_cost(troop_id: felt) -> (cost: Cost) {
 
 @storage_var
 func army_data_by_id(army_id: felt, realm_id: Uint256) -> (army_data: ArmyData) {
+}
+
+@storage_var
+func goblin_town_army_data_by_id(realm_id: Uint256) -> (army: felt) {
 }
 
 // -----------------------------------
@@ -395,6 +437,214 @@ func initiate_combat{
     return (combat_outcome,);
 }
 
+@external
+func initiate_goblintown_raid{
+    range_check_ptr, syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, bitwise_ptr: BitwiseBuiltin*
+}(
+    defending_army_id: felt,
+    defending_realm_id: Uint256,
+) -> (combat_outcome: felt) {
+    
+    alloc_locals;
+
+    // Check that the goblin squad has reached the raid target
+
+    // TODO: add a randomized delay to the attack reaching the target
+    // so that the player has a chance to react
+
+    // fetch combat data
+    let (attacking_goblin_data: felt) = get_goblin_army_data(defending_realm_id);
+    let (defending_realm_data: ArmyData) = get_realm_army_combat_data(
+        defending_army_id, defending_realm_id
+    );
+
+    // unpack armies
+    let (starting_attack_army: Army) = Combat.unpack_army(attacking_goblin_data);
+    let (starting_defend_army: Army) = Combat.unpack_army(defending_realm_data.ArmyPacked);
+
+    // emit starting
+    CombatStart_goblins.emit(
+        starting_attack_army,
+        defending_army_id,
+        defending_realm_id,
+        starting_defend_army,
+    );
+
+    // luck role and then outcome
+    let (luck) = roll_dice();
+    let (
+        combat_outcome, ending_attacking_army_packed, ending_defending_army_packed
+    ) = Combat.calculate_winner(
+        luck, attacking_goblin_data, defending_realm_data.ArmyPacked
+    );
+
+    // unpack
+    let (ending_attacking_army: Army) = Combat.unpack_army(ending_attacking_army_packed);
+    let (ending_defending_army: Army) = Combat.unpack_army(ending_defending_army_packed);
+
+    // pillaging only if attacker wins
+    let (now) = get_block_timestamp();
+    if (combat_outcome == COMBAT_OUTCOME_ATTACKER_WINS) {
+        let (controller) = Module.controller_address();
+        let (resources_logic_address) = IModuleController.get_module_address(
+            controller, ModuleIds.Resources
+        );
+        let (caller) = get_caller_address();
+        IResources.pillage_resources_for_goblins(resources_logic_address, defending_realm_id);
+
+        tempvar syscall_ptr = syscall_ptr;
+        tempvar range_check_ptr = range_check_ptr;
+        tempvar pedersen_ptr = pedersen_ptr;
+
+        tempvar attacking_xp = ATTACKING_ARMY_XP;
+        tempvar defending_xp = DEFENDING_ARMY_XP;
+    } else {
+        tempvar syscall_ptr = syscall_ptr;
+        tempvar range_check_ptr = range_check_ptr;
+        tempvar pedersen_ptr = pedersen_ptr;
+
+        tempvar attacking_xp = DEFENDING_ARMY_XP;
+        tempvar defending_xp = ATTACKING_ARMY_XP;
+    }
+
+    tempvar attacking_xp = attacking_xp;
+    tempvar defending_xp = defending_xp;
+
+    // store new values with added XP
+    // set_goblin_loot_and_emit(
+    //    ArmyData(ending_attacking_army_packed, now, attacking_realm_data.XP + attacking_xp, attacking_realm_data.Level, attacking_realm_data.CallSign),
+    // );
+
+    set_army_data_and_emit(
+        defending_army_id,
+        defending_realm_id,
+        ArmyData(ending_defending_army_packed, now, defending_realm_data.XP + defending_xp, defending_realm_data.Level, defending_realm_data.CallSign),
+    );
+
+    // emit end
+    CombatEnd_goblins.emit(
+        ending_attacking_army,
+        combat_outcome,
+        defending_army_id,
+        defending_realm_id,
+        ending_defending_army,
+    );
+
+    return (combat_outcome,);
+}
+
+@external
+func attack_goblin_town{
+    syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr, bitwise_ptr: BitwiseBuiltin*}(
+    realm_id: Uint256, attacking_army_id: felt) -> (outcome: felt) {
+    
+    alloc_locals;
+
+    Module.ERC721_owner_check(realm_id, ExternalContractIds.S_Realms);
+
+    let (goblin_town_address) = Module.get_module_address(ModuleIds.GoblinTown);
+    let (strength, spawn_ts, loot, general) = IGoblinTown.get_goblintown_stats(
+        goblin_town_address, realm_id
+    );
+
+    // check if there are goblins and if not, silently succeed
+    let (now) = get_block_timestamp();
+    let has_goblins = is_le(spawn_ts, now);
+    if (has_goblins == FALSE) {
+        return (TRUE,);
+    }
+
+    // TODO: Add some travel time
+
+    // get goblin army
+    let (goblins: Army) = Combat.get_goblin_army(strength, general);
+
+    // get attacking army
+    let (realm_data: ArmyData) = get_realm_army_combat_data(
+        attacking_army_id, realm_id);
+    let (attacker: Army) = Combat.unpack_army(realm_data.ArmyPacked);
+
+    // TODO: Food penalty
+
+    // emit starting
+    CombatStart_goblins_siege.emit(
+        attacking_army_id,
+        realm_id,
+        attacker,
+        goblins,
+    );
+
+    let (luck) = roll_dice();
+    
+    let (packed_goblins) = Combat.pack_army(goblins);
+    let (
+        combat_outcome, ending_attacking_army_packed, ending_defending_army_packed
+    ) = Combat.calculate_winner(
+        luck, realm_data.ArmyPacked, packed_goblins
+    );
+
+    // unpack
+    let (ending_attacking_army: Army) = Combat.unpack_army(ending_attacking_army_packed);
+    let (ending_defending_army: Army) = Combat.unpack_army(ending_defending_army_packed);
+
+    // if successful, earn $lords
+
+    if (combat_outcome == COMBAT_OUTCOME_ATTACKER_WINS) {
+        // attack was successful, goblin town defeated
+        // Lord earns $LORDS
+        let (caller) = get_caller_address();
+        let (lords_address) = Module.get_external_contract_address(ExternalContractIds.Lords);
+        IERC20.approve(lords_address, caller, Uint256(GOBLINDOWN_REWARD * 10 ** 18, 0));
+        IERC20.transfer(lords_address, caller, Uint256(GOBLINDOWN_REWARD * 10 ** 18, 0));
+
+        // There is a chance that the goblin general survived (if there was a general) and will return
+        // when the next stronghold upgrade occurs. Chance of this happening depends on the dominance
+        // of the attacking army
+
+        let attack_army_dominance = check_army_dominance(attacker, ending_attacking_army);
+
+        let (goblin_town_address) = Module.get_module_address(ModuleIds.GoblinTown);
+        IGoblinTown.update_nemesis_status(goblin_town_address, attack_army_dominance, realm_id, 20);
+
+        // TODO: Process additional reward for defeating a general
+        // Ideas: Generate an item for your adventurer that can be traded
+        // and rarity is determined based on the level of the general defeated
+
+        // new goblin town is spawned
+        IGoblinTown.spawn_next(goblin_town_address, realm_id);
+
+        tempvar syscall_ptr = syscall_ptr;
+        tempvar pedersen_ptr = pedersen_ptr;
+        tempvar range_check_ptr = range_check_ptr;
+
+        tempvar attacking_xp = ATTACKING_ARMY_XP;
+        
+    } else {
+        tempvar syscall_ptr = syscall_ptr;
+        tempvar pedersen_ptr = pedersen_ptr;
+        tempvar range_check_ptr = range_check_ptr;
+
+        tempvar attacking_xp = DEFENDING_ARMY_XP;
+    }
+
+    // store new values with added XP for the realm's attacking army
+    set_army_data_and_emit(
+        attacking_army_id,
+        realm_id,
+        ArmyData(ending_attacking_army_packed, now, realm_data.XP + attacking_xp, realm_data.Level, realm_data.CallSign),
+    );
+
+    CombatEnd_goblins_siege.emit(
+        attacking_army_id,
+        ending_attacking_army,
+        realm_id,
+        combat_outcome,
+        ending_defending_army,
+    );
+
+    return (combat_outcome,);
+}
+
 // -----------------------------------
 // Internal
 // -----------------------------------
@@ -478,6 +728,22 @@ func roll_dice{range_check_ptr, syscall_ptr: felt*, pedersen_ptr: HashBuiltin*}(
     return (r + 1 + 75,);  // values from 75 to 125 inclusive
 }
 
+func check_army_dominance{}(starting_attacking_army: Army, ending_attacking_army: Army) -> felt {
+    
+    let battalions_lost = 0;
+    
+    let battalions_lost = starting_attacking_army.LightCavalry.Quantity - ending_attacking_army.LightCavalry.Quantity;
+    let battalions_lost = starting_attacking_army.HeavyCavalry.Quantity - ending_attacking_army.HeavyCavalry.Quantity;
+    let battalions_lost = starting_attacking_army.Archer.Quantity - ending_attacking_army.Archer.Quantity;
+    let battalions_lost = starting_attacking_army.Longbow.Quantity - ending_attacking_army.Longbow.Quantity;
+    let battalions_lost = starting_attacking_army.Mage.Quantity - ending_attacking_army.Mage.Quantity;
+    let battalions_lost = starting_attacking_army.Arcanist.Quantity - ending_attacking_army.Arcanist.Quantity;
+    let battalions_lost = starting_attacking_army.LightInfantry.Quantity - ending_attacking_army.LightInfantry.Quantity;
+    let battalions_lost = starting_attacking_army.HeavyInfantry.Quantity - ending_attacking_army.HeavyInfantry.Quantity;
+
+    return battalions_lost;
+}
+
 // -----------------------------------
 // Getters
 // -----------------------------------
@@ -497,6 +763,27 @@ func get_realm_army_combat_data{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, 
     army_id: felt, realm_id: Uint256
 ) -> (army_data: ArmyData) {
     return army_data_by_id.read(army_id, realm_id);
+}
+
+@view
+func set_goblin_army_data{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr, bitwise_ptr: BitwiseBuiltin*}(
+    strength: felt, realm_id: Uint256) {
+
+    let (goblin_army: Army) = Combat.build_goblin_army(strength);
+    
+    let (packed_army: felt) = Combat.pack_army(goblin_army);
+    
+    goblin_town_army_data_by_id.write(realm_id, packed_army);
+    
+    return ();
+}
+
+@view
+func get_goblin_army_data{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
+    realm_id: Uint256
+) -> (army: felt) {
+    
+    return goblin_town_army_data_by_id.read(realm_id);
 }
 
 // @notice Check if Realm an be attacked

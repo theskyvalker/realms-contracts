@@ -10,6 +10,9 @@ namespace IResources {
     func pillage_resources(token_id: Uint256, claimer: felt) {
     }
 
+    func pillage_resources_for_goblins(token_id: Uint256) {
+    }
+
     func days_accrued(token_id: Uint256) -> (days_accrued: felt, remainder: felt) {
     }
 

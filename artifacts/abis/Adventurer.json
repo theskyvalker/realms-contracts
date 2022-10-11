@@ -1,0 +1,682 @@
+[
+    {
+        "members": [
+            {
+                "name": "low",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "high",
+                "offset": 1,
+                "type": "felt"
+            }
+        ],
+        "name": "Uint256",
+        "size": 2,
+        "type": "struct"
+    },
+    {
+        "members": [
+            {
+                "name": "Race",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "HomeRealm",
+                "offset": 1,
+                "type": "felt"
+            },
+            {
+                "name": "Birthdate",
+                "offset": 2,
+                "type": "felt"
+            },
+            {
+                "name": "Name",
+                "offset": 3,
+                "type": "felt"
+            },
+            {
+                "name": "Health",
+                "offset": 4,
+                "type": "felt"
+            },
+            {
+                "name": "Level",
+                "offset": 5,
+                "type": "felt"
+            },
+            {
+                "name": "Order",
+                "offset": 6,
+                "type": "felt"
+            },
+            {
+                "name": "Strength",
+                "offset": 7,
+                "type": "felt"
+            },
+            {
+                "name": "Dexterity",
+                "offset": 8,
+                "type": "felt"
+            },
+            {
+                "name": "Vitality",
+                "offset": 9,
+                "type": "felt"
+            },
+            {
+                "name": "Intelligence",
+                "offset": 10,
+                "type": "felt"
+            },
+            {
+                "name": "Wisdom",
+                "offset": 11,
+                "type": "felt"
+            },
+            {
+                "name": "Charisma",
+                "offset": 12,
+                "type": "felt"
+            },
+            {
+                "name": "Luck",
+                "offset": 13,
+                "type": "felt"
+            },
+            {
+                "name": "XP",
+                "offset": 14,
+                "type": "felt"
+            },
+            {
+                "name": "WeaponId",
+                "offset": 15,
+                "type": "felt"
+            },
+            {
+                "name": "ChestId",
+                "offset": 16,
+                "type": "felt"
+            },
+            {
+                "name": "HeadId",
+                "offset": 17,
+                "type": "felt"
+            },
+            {
+                "name": "WaistId",
+                "offset": 18,
+                "type": "felt"
+            },
+            {
+                "name": "FeetId",
+                "offset": 19,
+                "type": "felt"
+            },
+            {
+                "name": "HandsId",
+                "offset": 20,
+                "type": "felt"
+            },
+            {
+                "name": "NeckId",
+                "offset": 21,
+                "type": "felt"
+            },
+            {
+                "name": "RingId",
+                "offset": 22,
+                "type": "felt"
+            }
+        ],
+        "name": "AdventurerState",
+        "size": 23,
+        "type": "struct"
+    },
+    {
+        "data": [
+            {
+                "name": "previousOwner",
+                "type": "felt"
+            },
+            {
+                "name": "newOwner",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "from_",
+                "type": "felt"
+            },
+            {
+                "name": "to",
+                "type": "felt"
+            },
+            {
+                "name": "tokenId",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Transfer",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "owner",
+                "type": "felt"
+            },
+            {
+                "name": "approved",
+                "type": "felt"
+            },
+            {
+                "name": "tokenId",
+                "type": "Uint256"
+            }
+        ],
+        "keys": [],
+        "name": "Approval",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "owner",
+                "type": "felt"
+            },
+            {
+                "name": "operator",
+                "type": "felt"
+            },
+            {
+                "name": "approved",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "ApprovalForAll",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "implementation",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "Upgraded",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "previousAdmin",
+                "type": "felt"
+            },
+            {
+                "name": "newAdmin",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "AdminChanged",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "name": "name",
+                "type": "felt"
+            },
+            {
+                "name": "symbol",
+                "type": "felt"
+            },
+            {
+                "name": "proxy_admin",
+                "type": "felt"
+            },
+            {
+                "name": "xoroshiro_address_",
+                "type": "felt"
+            },
+            {
+                "name": "item_address_",
+                "type": "felt"
+            },
+            {
+                "name": "bag_address_",
+                "type": "felt"
+            },
+            {
+                "name": "lords_address_",
+                "type": "felt"
+            }
+        ],
+        "name": "initializer",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "new_implementation",
+                "type": "felt"
+            }
+        ],
+        "name": "upgrade",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "totalSupply",
+        "outputs": [
+            {
+                "name": "totalSupply",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "index",
+                "type": "Uint256"
+            }
+        ],
+        "name": "tokenByIndex",
+        "outputs": [
+            {
+                "name": "tokenId",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "owner",
+                "type": "felt"
+            },
+            {
+                "name": "index",
+                "type": "Uint256"
+            }
+        ],
+        "name": "tokenOfOwnerByIndex",
+        "outputs": [
+            {
+                "name": "tokenId",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "interfaceId",
+                "type": "felt"
+            }
+        ],
+        "name": "supportsInterface",
+        "outputs": [
+            {
+                "name": "success",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "name",
+        "outputs": [
+            {
+                "name": "name",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "symbol",
+        "outputs": [
+            {
+                "name": "symbol",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "owner",
+                "type": "felt"
+            }
+        ],
+        "name": "balanceOf",
+        "outputs": [
+            {
+                "name": "balance",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "Uint256"
+            }
+        ],
+        "name": "ownerOf",
+        "outputs": [
+            {
+                "name": "owner",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "Uint256"
+            }
+        ],
+        "name": "getApproved",
+        "outputs": [
+            {
+                "name": "approved",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "owner",
+                "type": "felt"
+            },
+            {
+                "name": "operator",
+                "type": "felt"
+            }
+        ],
+        "name": "isApprovedForAll",
+        "outputs": [
+            {
+                "name": "isApproved",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "Uint256"
+            }
+        ],
+        "name": "tokenURI",
+        "outputs": [
+            {
+                "name": "tokenURI",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "name": "owner",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "to",
+                "type": "felt"
+            },
+            {
+                "name": "tokenId",
+                "type": "Uint256"
+            }
+        ],
+        "name": "approve",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "operator",
+                "type": "felt"
+            },
+            {
+                "name": "approved",
+                "type": "felt"
+            }
+        ],
+        "name": "setApprovalForAll",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "Uint256"
+            }
+        ],
+        "name": "burn",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "Uint256"
+            },
+            {
+                "name": "tokenURI",
+                "type": "felt"
+            }
+        ],
+        "name": "setTokenURI",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "newOwner",
+                "type": "felt"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "to",
+                "type": "felt"
+            },
+            {
+                "name": "race",
+                "type": "felt"
+            },
+            {
+                "name": "home_realm",
+                "type": "felt"
+            },
+            {
+                "name": "name",
+                "type": "felt"
+            },
+            {
+                "name": "order",
+                "type": "felt"
+            }
+        ],
+        "name": "mint",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "xoroshiro",
+                "type": "felt"
+            }
+        ],
+        "name": "set_xoroshiro",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "get_xoroshiro",
+        "outputs": [
+            {
+                "name": "address",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "lords",
+                "type": "felt"
+            }
+        ],
+        "name": "set_lords",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "get_lords",
+        "outputs": [
+            {
+                "name": "address",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "loot",
+                "type": "felt"
+            }
+        ],
+        "name": "set_loot",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "get_loot",
+        "outputs": [
+            {
+                "name": "address",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "Uint256"
+            }
+        ],
+        "name": "getAdventurerById",
+        "outputs": [
+            {
+                "name": "adventurer",
+                "type": "AdventurerState"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "tokenId",
+                "type": "Uint256"
+            },
+            {
+                "name": "itemTokenId",
+                "type": "Uint256"
+            }
+        ],
+        "name": "equipItem",
+        "outputs": [
+            {
+                "name": "success",
+                "type": "felt"
+            }
+        ],
+        "type": "function"
+    }
+]

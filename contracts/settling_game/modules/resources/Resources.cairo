@@ -291,6 +291,69 @@ func pillage_resources{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_che
     return ();
 }
 
+// @notice Pillage resources after a succesful goblin raid
+// @param token_id: Staked realm id
+// Resources are stored to the realm's goblin town
+@external
+func pillage_resources_for_goblins{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
+    token_id: Uint256
+) {
+    alloc_locals;
+    let (caller) = get_caller_address();
+    let (block_timestamp) = get_block_timestamp();
+    // ONLY COMBAT CAN CALL
+    // TODO: Fix this to allow only combat to call.
+    // let (combat_address) = Module.get_module_address(ModuleIds.L06_Combat)
+
+    // with_attr error_message("RESOURCES: ONLY COMBAT MODULE CAN CALL"):
+    //     assert caller = combat_address
+    // end
+
+    // EXTERNAL CONTRACTS
+    let (realms_address) = Module.get_external_contract_address(ExternalContractIds.Realms);
+    let (resources_address) = Module.get_external_contract_address(ExternalContractIds.Resources);
+    let (settling_logic_address) = Module.get_module_address(ModuleIds.Settling);
+
+    // Get all vault raidable
+    let (_, resource_mint, total_vault_days, _) = get_all_vault_raidable(token_id);
+
+    // CHECK IS RAIDABLE
+    with_attr error_message("RESOURCES: NOTHING TO RAID!") {
+        assert_not_zero(total_vault_days);
+    }
+
+    let (last_update) = ISettling.get_time_vault_staked(settling_logic_address, token_id);
+
+    // Get 25% of the time and return it
+    // We only mint 25% of the resources, so we should only take 25% of the time
+    // TODO: could this overflow?
+    let (time_over) = Resources._calculate_vault_time_remaining(block_timestamp - last_update);
+
+    // SET VAULT TIME = REMAINDER - CURRENT_TIME
+    ISettling.set_time_vault_staked(settling_logic_address, token_id, time_over);
+
+    // resources ids
+    let (realms_data: RealmData) = IRealms.fetch_realm_data(realms_address, token_id);
+    let (resource_ids: Uint256*) = Resources._calculate_realm_resource_ids(realms_data);
+
+    let (local data: felt*) = alloc();
+    assert data[0] = 0;
+
+    let (goblin_town_address) = Module.get_module_address(ModuleIds.GoblinTown);
+
+    // Store pillaged resources in the defending realm's goblin town data
+    IGoblinTown.add_resources_to_goblintown(
+        goblin_town_address,
+        token_id,
+        realms_data.resource_number,
+        resource_ids,
+        realms_data.resource_number,
+        resource_mint,
+    );
+
+    return ();
+}
+
 // -----------------------------------
 // GETTERS
 // -----------------------------------

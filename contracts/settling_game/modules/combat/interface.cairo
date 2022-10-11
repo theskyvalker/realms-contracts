@@ -18,4 +18,6 @@ namespace IL06_Combat {
     }
     func get_realm_combat_data(realm_id: Uint256) -> (combat_data: RealmCombatData) {
     }
+    func initiate_goblintown_raid(defending_army_id: felt, defending_realm_id: Uint256) -> (combat_outcome: felt) {
+    }
 }

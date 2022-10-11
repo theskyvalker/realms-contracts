@@ -23,13 +23,16 @@ from contracts.settling_game.modules.combat.constants import (
     BattalionStatistics,
     SHIFT_ARMY,
     BattalionIds,
+    GoblinHealth,
 )
 from contracts.settling_game.utils.game_structs import (
     RealmBuildings,
     Battalion,
     Army,
     ArmyStatistics,
+    HobgoblinGeneral,
 )
+from contracts.settling_game.modules.goblintown.library import GoblinTown
 
 namespace Combat {
     // @notice Add Battalion to Army
@@ -159,6 +162,106 @@ namespace Combat {
 
         let packed = heavy_infantry_health + light_infantry_health + arcanist_health + mage_health + longbow_health + archer_health + heavy_cavalry_health + light_cavalry_health + heavy_infantry_quantity + light_infantry_quantity + archanist_quantity + mage_quantity + longbow_quantity + archer_quantity + heavy_cavalry_quantity + light_cavalry_quantity;
         return (packed,);
+    }
+
+    func get_goblin_army{
+        range_check_ptr, syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, bitwise_ptr: BitwiseBuiltin*}(
+        strength: felt, general: felt ) -> (goblin_army: Army) {
+        if (general != 0) {
+            return build_goblin_army_with_general(strength, general);
+        } else {
+            return build_goblin_army(strength);
+        }
+    }
+
+    func build_goblin_army{
+        range_check_ptr, syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, bitwise_ptr: BitwiseBuiltin*}(
+        strength: felt) -> (goblin_army: Army) {
+        
+        alloc_locals;
+
+        // define the limits of each battalion quantity for the goblin army based on strength
+
+        let (heavy_cavalry_qty,r) = unsigned_div_rem(strength, 6);
+        let (light_cavalry_qty,r) = unsigned_div_rem(strength, 4);
+
+        let light_cavalry_qty = light_cavalry_qty - heavy_cavalry_qty;
+
+        let (longbow_qty,r) = unsigned_div_rem(strength, 6);
+        let (archer_qty,r) = unsigned_div_rem(strength, 3);
+        
+        let archer_qty = archer_qty - longbow_qty;
+
+        let (mage_qty,r) = unsigned_div_rem(strength, 6);
+        let (arcanist_qty,r) = unsigned_div_rem(0, 1); // no arcanists possible for goblin armies regardless of strength
+        
+        let (heavy_infantry_qty,r) = unsigned_div_rem(strength, 3);
+        let light_infantry_qty = strength - heavy_infantry_qty;
+
+        return (
+            Army(
+                Battalion(light_cavalry_qty, GoblinHealth.LightCavalry),
+                Battalion(heavy_cavalry_qty, GoblinHealth.HeavyCavalry),
+                Battalion(archer_qty, GoblinHealth.Archer),
+                Battalion(longbow_qty, GoblinHealth.Longbow),
+                Battalion(mage_qty, GoblinHealth.Mage),
+                Battalion(arcanist_qty, GoblinHealth.Arcanist),
+                Battalion(light_infantry_qty, GoblinHealth.LightInfantry),
+                Battalion(heavy_infantry_qty, GoblinHealth.HeavyInfantry)
+            ),
+        );
+    }
+
+    func ensure_general_capacity{range_check_ptr}(
+        general: HobgoblinGeneral, threshold: felt, strength: felt, light_qty: felt, heavy_qty: felt) -> felt {
+
+        if (is_le(threshold, general.Level) == TRUE) {
+            return light_qty + general.Level - strength;
+        } else {
+            return light_qty - heavy_qty;
+        }
+    }
+
+    func build_goblin_army_with_general{
+        range_check_ptr, syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, bitwise_ptr: BitwiseBuiltin*}(
+        strength: felt, packed_general: felt) -> (goblin_army: Army) {
+        alloc_locals;
+
+        // define the limits of each battalion quantity for the goblin army based on strength
+        // a stronger (higher level) general does not have to sacrifice light units to add heavy units
+        // to the army compared to an army without a general leading them
+
+        let (general) = GoblinTown.unpack_general(packed_general);
+
+        let (heavy_cavalry_qty,r) = unsigned_div_rem(strength, 6);
+        let (light_cavalry_qty,r) = unsigned_div_rem(strength, 4);
+
+        let light_cavalry_qty = ensure_general_capacity(general, 6, strength, light_cavalry_qty, heavy_cavalry_qty);
+
+        let (longbow_qty,r) = unsigned_div_rem(strength, 6);
+        let (archer_qty,r) = unsigned_div_rem(strength, 3);
+        
+        let archer_qty = ensure_general_capacity(general, 5, strength, archer_qty, longbow_qty);
+
+        let (mage_qty,r) = unsigned_div_rem(strength, 6);
+        let (arcanist_qty,r) = unsigned_div_rem(0, 1); // no arcanists possible for goblin armies regardless of strength
+        
+        let (heavy_infantry_qty,r) = unsigned_div_rem(strength, 3);
+        
+        let light_infantry_qty = ensure_general_capacity(general, 3, strength, strength, heavy_infantry_qty);
+
+        return (
+            Army(
+                Battalion(light_cavalry_qty, GoblinHealth.LightCavalry + general.LightCavalry),
+                Battalion(heavy_cavalry_qty, GoblinHealth.HeavyCavalry + general.HeavyCavalry),
+                Battalion(archer_qty, GoblinHealth.Archer + general.Archer),
+                Battalion(longbow_qty, GoblinHealth.Longbow + general.Longbow),
+                Battalion(mage_qty, GoblinHealth.Mage + general.Mage),
+                Battalion(arcanist_qty, GoblinHealth.Arcanist + general.Arcanist),
+                Battalion(light_infantry_qty, GoblinHealth.LightInfantry + general.LightInfantry),
+                Battalion(heavy_infantry_qty, GoblinHealth.HeavyInfantry + general.HeavyInfantry)
+            ),
+        );
     }
 
     // @notice Gets statistics of Army

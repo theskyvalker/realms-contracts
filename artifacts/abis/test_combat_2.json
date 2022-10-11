@@ -1,0 +1,14 @@
+[
+    {
+        "inputs": [],
+        "name": "test_winner",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "test_build_goblin_army",
+        "outputs": [],
+        "type": "function"
+    }
+]

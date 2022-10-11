@@ -1,0 +1,260 @@
+[
+    {
+        "members": [
+            {
+                "name": "low",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "high",
+                "offset": 1,
+                "type": "felt"
+            }
+        ],
+        "name": "Uint256",
+        "size": 2,
+        "type": "struct"
+    },
+    {
+        "members": [
+            {
+                "name": "LightCavalry",
+                "offset": 0,
+                "type": "Battalion"
+            },
+            {
+                "name": "HeavyCavalry",
+                "offset": 2,
+                "type": "Battalion"
+            },
+            {
+                "name": "Archer",
+                "offset": 4,
+                "type": "Battalion"
+            },
+            {
+                "name": "Longbow",
+                "offset": 6,
+                "type": "Battalion"
+            },
+            {
+                "name": "Mage",
+                "offset": 8,
+                "type": "Battalion"
+            },
+            {
+                "name": "Arcanist",
+                "offset": 10,
+                "type": "Battalion"
+            },
+            {
+                "name": "LightInfantry",
+                "offset": 12,
+                "type": "Battalion"
+            },
+            {
+                "name": "HeavyInfantry",
+                "offset": 14,
+                "type": "Battalion"
+            }
+        ],
+        "name": "Army",
+        "size": 16,
+        "type": "struct"
+    },
+    {
+        "members": [
+            {
+                "name": "Quantity",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "Health",
+                "offset": 1,
+                "type": "felt"
+            }
+        ],
+        "name": "Battalion",
+        "size": 2,
+        "type": "struct"
+    },
+    {
+        "data": [
+            {
+                "name": "implementation",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "Upgraded",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "previousAdmin",
+                "type": "felt"
+            },
+            {
+                "name": "newAdmin",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "AdminChanged",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "realm_id",
+                "type": "Uint256"
+            },
+            {
+                "name": "goblin_army",
+                "type": "Army"
+            },
+            {
+                "name": "time_stamp",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "GoblinSpawn",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "name": "realm_id",
+                "type": "Uint256"
+            },
+            {
+                "name": "goblin_town_data_input",
+                "type": "felt"
+            },
+            {
+                "name": "now",
+                "type": "felt"
+            }
+        ],
+        "name": "attack_realm",
+        "outputs": [
+            {
+                "name": "status",
+                "type": "felt"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "realm_id",
+                "type": "Uint256"
+            },
+            {
+                "name": "goblin_town_data_input",
+                "type": "felt"
+            },
+            {
+                "name": "input_timestamp",
+                "type": "felt"
+            }
+        ],
+        "name": "upgrade_to_stronghold",
+        "outputs": [
+            {
+                "name": "status",
+                "type": "felt"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "realm_id",
+                "type": "Uint256"
+            },
+            {
+                "name": "fee_provided",
+                "type": "felt"
+            },
+            {
+                "name": "rnd",
+                "type": "felt"
+            }
+        ],
+        "name": "scout_goblin_town",
+        "outputs": [
+            {
+                "name": "success",
+                "type": "felt"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "test_pack_unpack",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "test_new_pack_unpack",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "test_new_pack_unpack_UINT",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "test_calculate_strength",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "test_get_squad_strength_of_resource",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "test_attack_realm",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "test_upgrade_to_stronghold",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "test_scout_goblin_town",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "test_pack_unpack_general",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "test_build_general",
+        "outputs": [],
+        "type": "function"
+    }
+]
